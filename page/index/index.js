@@ -14,7 +14,7 @@ Page({
       '首页',
       '水果生鲜',
     ],
-    banner: [
+    bannerLists: [
       {
         url: '/',
         src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
@@ -27,6 +27,32 @@ Page({
         url: '/',
         src: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
       },
+    ],
+    secondNav: [
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+    ],
+    qualityGoods: [
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
+    ],
+    adImgOne:'/images/ad.png',
+    adImgTwo:'/images/ad.png',
+    shopLists: [
+      { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]初春新款薄绒卫衣女长袖纯色上衣打底衫初春新款薄绒卫衣女长袖纯色上衣打底衫', price: '99', sales: '666' },
+      { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]', price: '99', sales: '666' },
+      { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]', price: '99', sales: '666' },
     ]
   },
   onLoad:function(e){

@@ -16,7 +16,7 @@ Component({
     // adImgTwo=''
     // shopListsTwo=''
     //banner图和导航
-    banner:{
+    bannerLists:{
       type:Array,
       value: [
         {
@@ -32,24 +32,27 @@ Component({
           src: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
         },
       ],
-      observer: function (newVal, oldVal) {
-        
-      }
+
     },
-    dd:{
-      type:String,
-      value:'11111111111'
-    },
-    secondNavs:{
+    //二级导航
+    secondNav:{
       type:Array,
-      value: [
-        { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-        { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-        { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-        { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-        { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-        { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-      ],
+    },
+    //精品推荐
+    qualityGoods:{
+      type:Array
+    },
+    //第一张广告图
+    adImgOne:{
+      type:String
+    },
+    //第二张广告图
+    adImgTwo: {
+      type: String
+    },
+    //轮播商品
+    shopLists:{
+      type:Array
     },
     // 弹窗标题
     title: {            // 属性名
@@ -64,30 +67,6 @@ Component({
    */
   data: {
     banner:[],
-    secondNavs: [
-      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
-    ],
-    qualityGoods: [
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-      { src: '/images/quality.png', url: '', price: '29', initPrice: '38.8' },
-    ],
-    shops: [
-      { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]初春新款薄绒卫衣女长袖纯色上衣打底衫初春新款薄绒卫衣女长袖纯色上衣打底衫', price: '99', sales: '666' },
-      { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]', price: '99', sales: '666' },
-      { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]', price: '99', sales: '666' },
-    ],
     adText: '选择你的精致生活',
     qualityText: '精品推荐',
     qualityButton: '秒抢好货',

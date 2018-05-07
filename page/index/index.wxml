@@ -26,13 +26,13 @@
       </block> 
   </scroll-view>
   <firstPage
-    banner=this.banner
-    secondNavs=''
+    bannerLists='{{bannerLists}}'
+    secondNav='{{secondNav}}'
     ad=''
-    qualityGoods=''
-    adImgOne=''
-    shopLists=''
-    adImgTwo=''
+    qualityGoods='{{qualityGoods}}'
+    adImgOne='{{adImgOne}}'
+    shopLists='{{shopLists}}'
+    adImgTwo='{{adImgTwo}}'
     shopListsTwo=''
   ></firstPage>
 </view>

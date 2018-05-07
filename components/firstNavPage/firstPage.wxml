@@ -1,11 +1,9 @@
 <!--轮播图-->
-<text>{{dd}}</text>
-  <swiper style='height:270rpx;' indicator-dots="{{indicatorDots}}"
+<swiper style='height:270rpx;' indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
   indicator-color="white" indicator-active-color="#F61628"
   >
-    <block wx:for="{{banner}}" >
-    
+    <block wx:for="{{bannerLists}}">
       <swiper-item>
         <navigator url="{{item.url}}">
             <image src="{{item.src}}" style='width:100%;height:270rpx;' class="slide-image"/>
@@ -15,7 +13,7 @@
   </swiper>
   <!--二级导航-->
   <view class="second_navs">
-    <block wx:for="{{secondNavs}}">
+    <block wx:for="{{secondNav}}">
       <navigator class="second_nav" url="{{item.url}}">
           <image src="{{item.src}}"/>
           <text>{{item.text}}</text>
@@ -46,10 +44,10 @@
         </block> 
     </scroll-view>
   </view>
-  <image style='width:100%;height:220rpx;' src='/images/ad.png' mode="aspectFit"/>
+  <image style='width:100%;height:220rpx;' src='{{adImgOne}}' mode="aspectFit"/>
   <!--商品列表-->
   <view class="shops_list">
-    <block wx:for="{{shops}}">
+    <block wx:for="{{shopLists}}">
       <navigator class="shops" url="{{item.url}}">
         <image mode="aspectFit" class="shops_img" src="{{item.src}}" />
           <view class="shops_intro">
@@ -62,4 +60,4 @@
         </navigator>
     </block>
   </view>
-  <image style='width:100%;height:220rpx;' src='/images/ad.png' mode="aspectFit"/>
+  <image style='width:100%;height:220rpx;' src='{{adImgTwo}}' mode="aspectFit"/>
