@@ -1,0 +1,65 @@
+<!--轮播图-->
+<text>{{dd}}</text>
+  <swiper style='height:270rpx;' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+  indicator-color="white" indicator-active-color="#F61628"
+  >
+    <block wx:for="{{banner}}" >
+    
+      <swiper-item>
+        <navigator url="{{item.url}}">
+            <image src="{{item.src}}" style='width:100%;height:270rpx;' class="slide-image"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--二级导航-->
+  <view class="second_navs">
+    <block wx:for="{{secondNavs}}">
+      <navigator class="second_nav" url="{{item.url}}">
+          <image src="{{item.src}}"/>
+          <text>{{item.text}}</text>
+        </navigator>
+    </block>
+  </view>
+  <!--广告位-->
+  <view class='ad'>
+    <text class="adText">{{adText}}</text>
+  </view>
+  <!--精品-->
+  <view class="quality_goods">
+    <view class="q_goods_head">
+      <image src='/images/home_img_seckill.png'/>
+      <text class="q_goods_title">{{qualityText}}</text>
+      <navigator class="q_goods_btn" url='/'>
+        <text>{{qualityButton}}</text>
+        <image src='/images/home_btn_more.png'/>
+      </navigator>
+    </view>
+    <scroll-view w scroll-x="true" style=" white-space: nowrap; display: flex" >
+        <block wx:for="{{qualityGoods}}" > 
+          <navigator class="q_goods_link" url="{{item.url}}">
+            <image src="{{item.src}}" lazy-load="true"/>
+            <text class="quality_price">{{item.price}}</text>
+            <text class="quality_initPrice">{{item.initPrice}}</text>
+          </navigator>
+        </block> 
+    </scroll-view>
+  </view>
+  <image style='width:100%;height:220rpx;' src='/images/ad.png' mode="aspectFit"/>
+  <!--商品列表-->
+  <view class="shops_list">
+    <block wx:for="{{shops}}">
+      <navigator class="shops" url="{{item.url}}">
+        <image mode="aspectFit" class="shops_img" src="{{item.src}}" />
+          <view class="shops_intro">
+            <text class="shops_title">{{item.title}}</text>
+            <view class="shops_detail">
+              <text class="shops_price">¥{{item.price}}</text>
+              <text class="shops_sales">销量:{{item.sales}}</text>
+            </view>
+          </view>
+        </navigator>
+    </block>
+  </view>
+  <image style='width:100%;height:220rpx;' src='/images/ad.png' mode="aspectFit"/>

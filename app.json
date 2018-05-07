@@ -1,0 +1,51 @@
+{
+  "pages":[    
+    "page/index/index",       
+    "page/address/getAddress",
+    "page/classify/classify",
+    "page/cart/cart",
+    "page/me/me",
+    "components/firstNavPage/firstPage"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "IShopping",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "backgroundColor":"#fff",
+    "selectedColor":"#333",
+    "color":"#333",
+    "list":[
+      {
+        "pagePath":"page/index/index",
+        "text":"首页",
+        "iconPath":"/images/classify_tab_home_n.png",
+        "selectedIconPath":"/images/home_tab_home_s.png"
+      },
+      {
+        "pagePath":"page/classify/classify",
+        "text":"分类",
+        "iconPath":"/images/home_tab_classification_n.png",
+        "selectedIconPath":"/images/classify_tab_classify_s.png"
+      },
+      {
+        "pagePath":"page/cart/cart",
+        "text":"购物车",
+        "iconPath":"/images/classify_tab_shoppingcart_n.png",
+        "selectedIconPath":"/images/shoppingcart_tab_shoppingcart_s.png"
+      },
+      {
+        "pagePath":"page/me/me",
+        "text":"我的",
+        "iconPath":"/images/classify_tab_me_n.png",
+        "selectedIconPath":"/images/me_tab_me_s.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

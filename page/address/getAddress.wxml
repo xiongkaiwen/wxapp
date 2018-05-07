@@ -1,0 +1,12 @@
+<!--page/address/getAddress.wxml-->
+<view class='container'>
+  <view class="currentPosition">
+    您正在看：{{currentPostion}}
+  </view>
+  <view class="area_lists">
+    <block wx:for="{{areaLists}}">
+      <view bindtap='areaSelect' class="area_list" data-areaName="{{item.areaName}}" data-areaId="{{item.areaId}}">{{item.areaName}}</view>
+    </block>
+  </view>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+</view>
