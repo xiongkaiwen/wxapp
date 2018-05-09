@@ -1,6 +1,0 @@
-{
-	"enablePullDownRefresh":false,
-    "usingComponents": {
-      "firstPage": "/components/firstNavPage/firstPage"
-    }
-}
