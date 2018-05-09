@@ -1,0 +1,118 @@
+/* pages/me/me.wxss */
+.meHeader{
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+}
+.meHeader_bg{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:320rpx;
+}
+.meHeader_content{
+  position: absolute;
+  top:20rpx;
+  left: 0;
+  width: 100%;
+  height:300rpx;
+  z-index: 2;
+}
+.meHeader_tool{
+  overflow: hidden;
+  height: 38rpx;
+  width: 100%;
+}
+.meHeader_setting{
+  float: right;
+  width: 38rpx;
+  height:38rpx;
+  margin-right: 40rpx;
+}
+.meHeader_msg{
+  float: right;
+  width:38rpx;
+  height: 38rpx;
+  margin-right: 30rpx;
+}
+.meHeader_personMess{
+  height:160rpx;
+  width:100%;
+  overflow: hidden;
+  margin-top: 36rpx;
+}
+.myHeader_personHeader{
+  width:160rpx;
+  height: 160rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-right: 24rpx;
+}
+.myHeader_person_mess{
+  float: left;
+}
+.myHeader_person_name{
+  color:#fefefe;
+  font-size: 32rpx;
+  margin-top:24rpx;
+}
+.myHeader_person_id{
+  color:#fefefe;
+  font-size: 30rpx;
+}
+.myHeader_person_degree{
+  color:#FAB0B0;
+  font-size: 26rpx;
+}
+
+.myOrder{
+  display: flex;
+  margin: 30rpx 0;
+}
+.myOrder_list{
+  width: 20%;
+  text-align: center;
+  position: relative;
+}
+.class1{
+  width:1px;
+  height: 53rpx;
+  position: absolute;
+  background: #F61628;
+  right:0;
+  top:6rpx;
+}
+.class2{
+  position: absolute;
+  width: 30rpx;
+  height:30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border:1px solid #F93141;
+  color:#F93141;
+  border-radius: 50%;
+  font-size: 20rpx;
+  right:38rpx;
+  top:-4rpx;
+  background:#fff;
+}
+.myOrder_list>image{
+  width:57rpx;
+  height:57rpx;
+  display: block;
+  margin:0 auto;
+}
+.myOrder_list>text{
+  color:#444;
+  font-size: 24rpx;
+}
+
+.meServer{
+  color: #1A0404;
+  font-size: 30rpx;
+  height: 78rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #eee;
+  padding-left: 40rpx;
+}

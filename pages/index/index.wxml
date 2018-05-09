@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 固定头部和一级滑动导航 -->
+  <view class='fix_header'>
+    <!--头部导航-->
+    <view>
+        <view class="header">
+      <view class="position_icon" bindtap='goSelectArea'>
+        <image src="/images/nav_localize_n@2x.png"  />
+      </view>
+      <view class="position"  bindtap='goSelectArea'>
+        <text>送至:</text>
+        <text class="position_text">{{position}}</text>
+        <image src="/images/btn_more@2x.png" class="position_nav_icon" />
+      </view>
+      <view class="search" bindtap='goSearch'>
+        <text>{{searchText}}</text>
+        <image class="search_icon" src="/images/home_nav_search.png" />
+      </view>
+      <view class="scan_icon" bindtap='scanCode'>
+        <image src='/images/home_nav_scanning@2x.png' />
+      </view>
+    </view>
+    </view>
+
+    <!--一级左右滑动-->
+    <scroll-view  scroll-x="true" style=" white-space: nowrap; display: flex">
+        <block wx:for="{{firstNav}}" wx:key="unique"> 
+          <view id="nav{{index}}" class="first_nav {{index==slideIndex?'active':''}}" bindtap='firstNav'>{{item}} </view>
+        </block> 
+    </scroll-view>
+  </view>
+
+   <firstPage
+    bannerLists='{{bannerLists}}'
+    secondNav='{{secondNav}}'
+    ad=''
+    qualityGoods='{{qualityGoods}}'
+    adImgOne='{{adImgOne}}'
+    shopLists='{{shopLists}}'
+    adImgTwo='{{adImgTwo}}'
+    shopListsTwo=''
+    wx:if="{{slideIndex==0}}"
+  ></firstPage> 
+    <otherPage
+    bannerLists='{{bannerLists}}'
+    secondNav='{{secondNav}}'
+    shopLists='{{shopLists}}'
+    bind:condiNav='_condiNav'
+    wx:if="{{!slideIndex==0}}"
+  ></otherPage>
+</view>
+<loading hidden="{{hiddenLoading}}">正在加载</loading>

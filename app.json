@@ -1,11 +1,13 @@
 {
   "pages":[    
-    "page/index/index",       
-    "page/address/getAddress",
-    "page/classify/classify",
-    "page/cart/cart",
-    "page/me/me",
-    "components/firstNavPage/firstPage"
+    "pages/me/me",
+    "pages/classify/classify",
+    "pages/index/index",       
+    "pages/search/search",
+    "pages/address/getAddress",
+    "pages/cart/cart",
+    "components/firstNavPage/firstPage",
+    "components/otherNavPage/otherPage"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -19,25 +21,25 @@
     "color":"#333",
     "list":[
       {
-        "pagePath":"page/index/index",
+        "pagePath":"pages/index/index",
         "text":"首页",
         "iconPath":"/images/classify_tab_home_n.png",
         "selectedIconPath":"/images/home_tab_home_s.png"
       },
       {
-        "pagePath":"page/classify/classify",
+        "pagePath":"pages/classify/classify",
         "text":"分类",
         "iconPath":"/images/home_tab_classification_n.png",
         "selectedIconPath":"/images/classify_tab_classify_s.png"
       },
       {
-        "pagePath":"page/cart/cart",
+        "pagePath":"pages/cart/cart",
         "text":"购物车",
         "iconPath":"/images/classify_tab_shoppingcart_n.png",
         "selectedIconPath":"/images/shoppingcart_tab_shoppingcart_s.png"
       },
       {
-        "pagePath":"page/me/me",
+        "pagePath":"pages/me/me",
         "text":"我的",
         "iconPath":"/images/classify_tab_me_n.png",
         "selectedIconPath":"/images/me_tab_me_s.png"

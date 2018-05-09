@@ -24,81 +24,12 @@
 }
 
 
-.ad{
-  border-top: 1px solid #F8EEE5;
-  border-bottom: 1px solid #F8EEE5;
-  padding:18rpx 30rpx;
-}
-.adText{
-  color:#FF3436;
-  font-size: 34rpx;
-}
-
-
-.quality_goods{
-  margin-bottom: 16rpx;
-}
-.q_goods_head{
-  height:40rpx;
-  margin-top: 30rpx;
-  margin-bottom: 44rpx;
-}
-.q_goods_head>image{
-  height:40rpx;
-  width: 12rpx;
-  float: left
-}
-.q_goods_title{
-  font-size: 26rpx;
-  color:#333;
-  margin-left: 16rpx;
-  float: left;
-  height:40rpx;
-  line-height: 42rpx;
-}
-.q_goods_btn{
-  float: right;
-  height: 40rpx;
-  line-height: 42rpx;
-}
-.q_goods_btn text{
-  color:#666;
-  font-size: 20rpx;
-}
-.q_goods_btn image{
-  width:50rpx;
-  height:50rpx;
-  vertical-align: middle;
-}
-.q_goods_link{
-  display: inline-block;
-  margin:0 30rpx;
-}
-.q_goods_link image{
-  width: 174rpx;
-  height:174rpx;
-}
-.q_goods_link text{
-  display: block;
-  text-align: center;
-}
-.quality_price{
-  color: #F51628;
-  font-size: 26rpx;
-}
-.quality_initPrice{
-  color:#666;
-  font-size: 22rpx;
-  text-decoration-line: line-through;
-}
-
 
 .shops_list{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   background: #f8f8f8;
-  margin-top:-7rpx;
 }
 .shops{
   width:49.2%;
@@ -136,4 +67,34 @@
   color:#666;
   font-size: 22rpx;
   margin-top:4rpx;
+}
+
+
+.condition_nav{
+  display: flex;
+  border-top:6rpx solid #eee;
+}
+.condtion_nav_text{
+  display:inline-block;
+  line-height:60rpx;
+  height:58rpx;
+  padding:0 4rpx;
+}
+.condtion_nav_select{
+  border-bottom: 4rpx solid #f61628;
+}
+.condition_nav>view{
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.condiNav{
+  width: 8rpx;
+  height: 18rpx;
+}
+.condiNav_screen{
+  width:23rpx;
+  height:23rpx;
 }

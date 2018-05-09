@@ -1,0 +1,120 @@
+.classifyHeader{
+  height:88rpx;
+  line-height: 88rpx;
+  width:100%;
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  left: 0;
+  text-align: center;
+  border-bottom: 2rpx solid #eee;
+  background: #fff;
+}
+.classify_search_icon{
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  top: 10px;
+  left: 50rpx;
+}
+.classify_search_select{
+  overflow: hidden;
+  display: inline-block;
+}
+.classify_search_select>view{
+  float: left;
+  color:#888;
+  font-size: 30rpx;
+  margin:0 30rpx;
+  height: 74rpx;
+}
+.classify_search_select>view.active{
+  border-bottom: 4rpx solid #333;
+  color:#333;
+  font-size: 32rpx;
+}
+.classify_searchInput{
+    background: #eee;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 100rpx;
+    width:450rpx;
+    display: inline-block;
+    margin-top:16rpx;
+    color:#fff;
+}
+.classify_searchInput>image{
+  width:42rpx;
+  height:42rpx;
+  vertical-align: middle;
+}
+
+
+.classifySlider{
+  width:156rpx;
+  height: 92vh;
+  border-right: 1px solid #eee;
+  position: fixed;
+  top:88rpx;
+  text-align: center;
+}
+.classifySlider_nav{
+  color: #333;
+  font-size: 24rpx;
+  line-height: 74rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.classifySlider_nav.active{
+  border-bottom:2px solid #F61628;
+}
+.classify_content{
+  padding-left: 156rpx;
+  padding-top:88rpx;
+}
+.classify1{
+  float: left;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color:#333;
+}
+.goMore{
+  float: right;
+  line-height: 50rpx;
+  font-size: 22rpx;
+  color:#666;
+}
+.goMore image{
+  vertical-align: middle;
+}
+.classify_content_title{
+  overflow: hidden;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding:0 20rpx;
+  margin-top: 10rpx;
+}
+.classifyShopLists{
+  overflow: hidden;
+}
+.classify_shopList{
+  float: left;
+  width:33%;
+  text-align: center;
+}
+.classify_shopList image{
+  width:80%;
+  display: block;
+  margin:0 auto;
+}
+.classify_shopList text{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display: block;
+  font-size: 20rpx;
+  color:#4D4D4D;
+  line-height: 40rpx;
+  margin-bottom: 10rpx;
+}

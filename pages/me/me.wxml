@@ -1,0 +1,56 @@
+<!--pages/me/me.wxml-->
+<view>
+  <!-- 我的头部展示部分 -->
+  <view class='meHeader'>
+    <view class='meHeader_content'>
+      <view class='meHeader_tool'>
+        <image class='meHeader_msg' src='../../images/me_btn_msg.png'></image>
+        <image class='meHeader_setting' src='../../images/me_btn_setting.png'></image>
+      </view>
+      <view class='meHeader_personMess'>
+        <image class='myHeader_personHeader' src='../../images/me_avatar.png'></image>
+        <view class='myHeader_person_mess'>
+          <view class='myHeader_person_name'>
+            夏莎mm丶
+          </view>
+          <view class='myHeader_person_id'>060601060101</view>
+          <view class='myHeader_person_degree'>普通会员</view>
+        </view>
+      </view>
+    </view>
+    <image class='meHeader_bg' src='../../images/me_bg.png'></image>
+  </view>
+  <!-- 账户订单信息 -->
+  <view class='myOrder'>
+    <view class='myOrder_list'>
+      <image src='../../images/me_btn_pay.png'></image>
+      <text>待付款</text>
+    </view>
+    <view class='myOrder_list'>
+      <image src='../../images/me_btn_delivery.png'></image>
+      <text>待发货</text>
+    </view>
+    <view class='myOrder_list'>
+      <view class='class2'>1</view>
+      <image src='../../images/me_btn_received.png'></image>
+      <text>待收货</text>
+    </view>
+    <view class='myOrder_list'>
+      <view class='class1'></view>
+      <image src='../../images/me_btn_evaluation.png'></image>
+      <text>待评价</text>
+    </view>
+    <view class='myOrder_list'>
+      <image src='../../images/me_btn_order.png'></image>
+      <text>我的订单</text>
+    </view>
+  </view>
+  <!-- 广告图片 -->
+  <navigator url=''>
+    <image style='width:100%;' mode='widthFix' src='{{meAd.src}}'></image>
+  </navigator>
+  <!-- 我的服务 -->
+  <view>
+    <view class='meServer'>我的服务</view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view>
+  <!-- 分类头部 -->
+  <view class='classifyHeader'>
+      <image class='classify_search_icon' src='../../images/home_nav_search.png'></image>
+      <view bindtap='classifySelect' class='classify_search_select'>
+        <view class="{{classifySelected?'active':''}}">分类</view>
+        <view class="{{classifySelected?'':'active'}}">品牌</view>
+      </view> 
+      <!-- <view class='classify_searchInput'>
+        <image src='../../images/classify_nav_search.png'></image>
+        请输入关键字
+      </view> -->
+  </view>
+  <!-- 左侧导航 -->
+  <scroll-view scroll-y="true" class='classifySlider'>
+      <block wx:for='{{classifySlider}}'>
+        <view bindtap='classifySlider' class="classifySlider_nav {{item.id==classifySliderIndex?'active':''}}" data-id='{{item.id}}'>{{item.text}}</view>
+      </block>
+  </scroll-view>
+  <!-- 右侧内容展示 -->
+  <view class='classify_content'>
+    <image style='height:157rpx;width:100%;' mode='widthFix' src='../../images/ad.png'></image>
+    <view class='classify_content_title'>
+      <text class='classify1'>新鲜水果</text>
+      <navigator class='goMore'>热销榜<image style='width:38rpx;height:38rpx;' src='../../images/details_btn_more.png'></image></navigator>
+    </view>
+    <view class='classifyShopLists'>
+      <block wx:for="{{classifyShopLists}}">
+        <navigator url='/' class='classify_shopList'>
+          <image src='{{item.src}}' mode='widthFix'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>
+
