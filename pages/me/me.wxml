@@ -22,28 +22,28 @@
   </view>
   <!-- 账户订单信息 -->
   <view class='myOrder'>
-    <view class='myOrder_list'>
+    <navigator class='myOrder_list'>
       <image src='../../images/me_btn_pay.png'></image>
       <text>待付款</text>
-    </view>
-    <view class='myOrder_list'>
+    </navigator>
+    <navigator class='myOrder_list'>
       <image src='../../images/me_btn_delivery.png'></image>
       <text>待发货</text>
-    </view>
-    <view class='myOrder_list'>
+    </navigator>
+    <navigator class='myOrder_list'>
       <view class='class2'>1</view>
       <image src='../../images/me_btn_received.png'></image>
       <text>待收货</text>
-    </view>
-    <view class='myOrder_list'>
+    </navigator>
+    <navigator class='myOrder_list'>
       <view class='class1'></view>
       <image src='../../images/me_btn_evaluation.png'></image>
       <text>待评价</text>
-    </view>
-    <view class='myOrder_list'>
+    </navigator>
+    <navigator class='myOrder_list'>
       <image src='../../images/me_btn_order.png'></image>
       <text>我的订单</text>
-    </view>
+    </navigator>
   </view>
   <!-- 广告图片 -->
   <navigator url=''>
@@ -52,5 +52,13 @@
   <!-- 我的服务 -->
   <view>
     <view class='meServer'>我的服务</view>
+    <view class='meServerLists'>
+      <block wx:for="{{meServerLists}}">
+        <navigator url='{{item.url}}' class='myServer_list'>
+          <image class='myServer_list_img' src='{{item.src}}'></image>
+          <view class='myServer_list_text'>{{item.text}}</view>
+        </navigator>
+      </block>
+    </view>
   </view>
 </view>

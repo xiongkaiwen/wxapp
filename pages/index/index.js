@@ -5,6 +5,7 @@ Page({
     searchText:"品质水果",
     hiddenLoading:false,
     slideIndex:0,
+    isHidden:true,
     firstNav:[
       '首页',
       '水果生鲜',
@@ -30,6 +31,12 @@ Page({
       },
     ],
     secondNav: [
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
+      { src: '/images/icon.png', url: '', text: '爆款秒杀' },
       { src: '/images/icon.png', url: '', text: '爆款秒杀' },
       { src: '/images/icon.png', url: '', text: '爆款秒杀' },
       { src: '/images/icon.png', url: '', text: '爆款秒杀' },
@@ -130,13 +137,33 @@ Page({
   },
   //一级滑动导航点击事件
   firstNav:function(e){
-    this.setData({
-      slideIndex: e.currentTarget.id.substring(3)
-    })
+    let index = e.currentTarget.id.substring(3);
+    if(index==0){
+      this.setData({
+        slideIndex: e.currentTarget.id.substring(3),
+        isHidden:true
+      })
+    }else{
+      this.setData({
+        slideIndex: e.currentTarget.id.substring(3),
+        isHidden: false
+      })
+    }
+
   },
   //条件导航点击触发的对应事件   用于修改展示商品列表数据
   _condiNav:function(){
     console.log(1111)
-  }
+  },
+  onPullDownRefresh: function () {
+    //wx.showNavigationBarLoading() //在标题栏中显示加载
+
+    //模拟加载
+    setTimeout(function () {
+      // complete
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1500);
+  },
 
 })

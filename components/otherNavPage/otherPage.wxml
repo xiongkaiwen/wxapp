@@ -12,12 +12,47 @@
     </block>
   </swiper>
   <!--二级导航-->
+<view style='background:#fff'>
   <view class="second_navs">
-    <block wx:for="{{secondNav}}">
-      <navigator class="second_nav" url="{{item.url}}">
-          <image src="{{item.src}}"/>
-          <text>{{item.text}}</text>
-        </navigator>
+    <!-- 如果二级导航长度大于10这显示显示隐藏功能 -->
+    <block wx:if="{{secondNav.length>10}}">
+        <block wx:if="{{toggleLength}}">
+          <block wx:for="{{secondNav}}">
+            <navigator wx:if="{{index<9}}" class="second_nav" url="{{item.url}}">
+                <image src="{{item.src}}"/>
+                <text>{{item.text}}</text>
+            </navigator>
+            <view bindtap='toggleLength' class="second_nav" wx:if="{{index==10}}">
+              <view class='toggleLength'>
+                <image src='../../images/classify_btn_all.png'></image>
+              </view> 
+              <text>全部</text>
+            </view>
+          </block>
+        </block>
+        <block  wx:if="{{!toggleLength}}">
+          <block wx:for="{{secondNav}}">
+            <navigator class="second_nav" url="{{item.url}}">
+                <image src="{{item.src}}"/>
+                <text>{{item.text}}</text>
+            </navigator>
+          </block>
+          <view bindtap='toggleLength' class="second_nav">
+            <view class='toggleLength'>
+              <image src='../../images/classify_btn_closed.png'></image>
+            </view> 
+            <text>全部</text>
+          </view>
+        </block>
+      
+    </block>
+    <block wx:else>
+      <block wx:for="{{secondNav}}">
+        <navigator class="second_nav" url="{{item.url}}">
+            <image src="{{item.src}}"/>
+            <text>{{item.text}}</text>
+          </navigator>
+      </block>
     </block>
   </view>
 
@@ -60,5 +95,5 @@
       </block>
     </view>
   </view>
-
+</view>
   

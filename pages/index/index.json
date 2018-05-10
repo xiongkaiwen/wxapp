@@ -1,5 +1,5 @@
 {
-	"enablePullDownRefresh":false,
+	"enablePullDownRefresh":true,
     "usingComponents": {
       "firstPage": "/components/firstNavPage/firstPage",
       "otherPage": "/components/otherNavPage/otherPage"

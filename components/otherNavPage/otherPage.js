@@ -47,6 +47,7 @@ Component({
     duration: 1000,
     condiNavIndex:0,
     sales:false,
+    toggleLength:true,
     condiNavs:[
       {
         text:'全部',
@@ -126,6 +127,12 @@ Component({
       }
       //触发条件导航点击事件给父组件
       this.triggerEvent("condiNav");
+    },
+    //点击切换二级导航隐藏显示部分
+    toggleLength:function(){
+      this.setData({
+        toggleLength: !this.data.toggleLength
+      })
     }
   }
 })

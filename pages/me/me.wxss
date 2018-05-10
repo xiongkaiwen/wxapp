@@ -116,3 +116,23 @@
   border-bottom: 1px solid #eee;
   padding-left: 40rpx;
 }
+.meServerLists{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.myServer_list{
+  width:25%;
+  margin: 30rpx 0;
+}
+.myServer_list_img{
+  width:57rpx;
+  height: 57rpx;
+}
+.myServer_list_text{
+  font-size: 26rpx;
+  color:#050101;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

@@ -5,11 +5,13 @@
   display: flex;
   flex-wrap:wrap;
   padding-bottom: 24rpx;
+  background: #fff;
 }
 .second_nav{
   width:20%;
   text-align: center;
   margin-top:26rpx;
+  background: #fff;
 }
 .second_nav image{
   width:76rpx;
@@ -63,7 +65,7 @@
 }
 .q_goods_btn text{
   color:#666;
-  font-size: 20rpx;
+  font-size: 22rpx;
 }
 .q_goods_btn image{
   width:50rpx;

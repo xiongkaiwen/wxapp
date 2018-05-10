@@ -30,24 +30,26 @@
         </block> 
     </scroll-view>
   </view>
-
-   <firstPage
-    bannerLists='{{bannerLists}}'
-    secondNav='{{secondNav}}'
-    ad=''
-    qualityGoods='{{qualityGoods}}'
-    adImgOne='{{adImgOne}}'
-    shopLists='{{shopLists}}'
-    adImgTwo='{{adImgTwo}}'
-    shopListsTwo=''
-    wx:if="{{slideIndex==0}}"
-  ></firstPage> 
+  <view hidden="{{!isHidden}}">
+    <firstPage
+      bannerLists='{{bannerLists}}'
+      secondNav='{{secondNav}}'
+      ad=''
+      qualityGoods='{{qualityGoods}}'
+      adImgOne='{{adImgOne}}'
+      shopLists='{{shopLists}}'
+      adImgTwo='{{adImgTwo}}'
+      shopListsTwo=''
+    ></firstPage> 
+  </view>
+  <view hidden="{{isHidden}}">
     <otherPage
-    bannerLists='{{bannerLists}}'
-    secondNav='{{secondNav}}'
-    shopLists='{{shopLists}}'
-    bind:condiNav='_condiNav'
-    wx:if="{{!slideIndex==0}}"
-  ></otherPage>
+      bannerLists='{{bannerLists}}'
+      secondNav='{{secondNav}}'
+      shopLists='{{shopLists}}'
+      bind:condiNav='_condiNav'
+    ></otherPage> 
+  </view>
+
 </view>
 <loading hidden="{{hiddenLoading}}">正在加载</loading>

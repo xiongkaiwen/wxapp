@@ -12,6 +12,7 @@
     </block>
   </swiper>
   <!--二级导航-->
+<view style='background:#fff;'>
   <view class="second_navs">
     <block wx:for="{{secondNav}}">
       <navigator class="second_nav" url="{{item.url}}">
@@ -60,4 +61,5 @@
         </navigator>
     </block>
   </view>
-  <image style='width:100%;height:220rpx;' src='{{adImgTwo}}' mode="aspectFit"/>
+  <image style='width:100%;height:220rpx;' src='{{adImgTwo}}' mode="aspectFit"/>  
+</view>

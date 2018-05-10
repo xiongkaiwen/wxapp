@@ -21,6 +21,7 @@
   font-size: 20rpx;
   color:#666;
   margin-top: 4rpx;
+  display: block;
 }
 
 
@@ -40,7 +41,6 @@
 .shops_img{
   height:370rpx;
   width:100%;
-  margin-top: -1rpx;
 }
 .shops_title{
   color:#333;
@@ -87,14 +87,28 @@
   flex: 1;
   text-align: center;
   font-size: 30rpx;
-  height: 60rpx;
+  height: 64rpx;
   line-height: 60rpx;
 }
 .condiNav{
-  width: 8rpx;
-  height: 18rpx;
+  width: 12rpx;
+  height: 23rpx;
 }
 .condiNav_screen{
   width:23rpx;
   height:23rpx;
+}
+
+.toggleLength{
+  width:76rpx;
+  height:76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  display: inline-block;
+}
+.toggleLength image{
+  width: 60rpx !important;
+  height: 60rpx !important;
+  vertical-align: middle;
+  margin-top:4rpx;
 }

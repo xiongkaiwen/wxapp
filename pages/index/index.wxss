@@ -1,5 +1,6 @@
 page{
   padding-top: 140rpx;
+  background: #eee;
 }
 .fix_header{
   position: fixed;

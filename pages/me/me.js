@@ -8,7 +8,19 @@ Page({
     meAd:{
       url:'',
       src:'../../images/ad.png'
-    }
+    },
+    meServerLists:[
+      { url: '/',src:'../../images/me_btn_wykd.png',text:'我要开店'},
+      { url: '/', src: '../../images/me_btn_wdgz.png', text: '我的关注' },
+      { url: '/', src: '../../images/me_btn_wdye.png', text: '我的余额' },
+      { url: '/', src: '../../images/me_btn_wdjf.png', text: '我的积分' },
+      { url: '/', src: '../../images/me_btn_ddts.png', text: '订单投诉' },
+      { url: '/', src: '../../images/me_btn_dzgl.png', text: '地址管理' },
+      { url: '/', src: '../../images/me_btn_zhaq.png', text: '账户安全' },
+      { url: '/', src: '../../images/me_btn_lljl.png', text: '浏览记录' },
+      { url: '/', src: '../../images/me_btn_shgl.png', text: '审核管理' },
+      { url: '/', src: '../../images/me_btn_mhsjbsq.png', text: '卖货商级别申请卖货商级别申请' },
+    ]
   },
 
   /**
