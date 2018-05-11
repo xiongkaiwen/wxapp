@@ -1,0 +1,6 @@
+<!-- 页面头部 -->
+<view class='pageHeader'>
+  <image class='pageHeader_goback' src='../../images/nav_btn_back_new.png'></image>
+  <text class='pageHeader_title'>{{pageTitle}}</text>
+  <text class='pageHeader_tool' bindtap='pageTool'>{{pageTool}}</text>
+</view>

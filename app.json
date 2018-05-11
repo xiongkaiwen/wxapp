@@ -1,14 +1,15 @@
 {
   "pages":[    
+    "pages/me/browseHistroy",
     "pages/index/index",
     "pages/me/me",
     "pages/classify/classify",
-    
     "pages/search/search",
     "pages/address/getAddress",
     "pages/cart/cart",
     "components/firstNavPage/firstPage",
-    "components/otherNavPage/otherPage"
+    "components/otherNavPage/otherPage",
+    "components/pageHeader/pageHeader"
   ],
   "window":{
     "backgroundTextStyle":"light",

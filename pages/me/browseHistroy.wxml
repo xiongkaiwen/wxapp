@@ -1,0 +1,39 @@
+<!-- 页面头部 -->
+<pageHeader
+  pageTitle='{{pageTitle}}'
+  pageTool='{{pageToolText}}'
+  bind:pageToolFn="pageToolFn"
+></pageHeader>
+<!-- 查看记录列表 -->
+<view class='browseHistoryLists'>
+  <block wx:for="{{browseHistoryLists}}" wx:for-item="parentItem" wx:for-index="parentIndex">
+    <view>
+      <view class='browseHistory_date'>{{parentItem.date}} </view>
+      <block wx:for="{{parentItem.lists}}">
+        <view class='browseHistory_list'>
+          <image class='browseHistory_list_img' src='{{item.imgSrc}}'></image>
+          <view class='browseHistory_list_right'>
+            <view class='browseHistory_list_title'>
+              {{item.title}} 
+              <image wx:if="{{item.textIcon}}" mode='widthFix' src='{{item.textIcon}}' class='browseHistory_list_titleImg'></image>
+            </view>
+            <view class='browseHistory_list_price'>¥{{item.price}}</view>
+            <view class='browseHistory_list_bottom'>
+              <navigator url='/' class='browseHistory_list_lookLike' >看相似</navigator>
+              <image hidden="{{!isEdit}}" class='browseHistory_list_cart' src='../../images/lljl_btn_shoppingcart.png'></image>
+              <image data-parentIndex='{{parentIndex}}' data-id='{{item.id+index}}' data-selfIndex='{{index}}' bindtap='toggleSelect' class='browseHistory_list_edit' hidden="{{isEdit}}" src="{{item.isSelect?'../../images/shoppingcar_btn_select_s.png':'../../images/shoppingcar_btn_select_n.png'}}"></image>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>
+<view hidden='{{isEdit}}' class='editTool'>
+  <view class='editTool_select' bindtap='selectAll'>
+    <image src="{{isSelectAll?'../../images/shoppingcar_btn_select_s.png':'../../images/shoppingcar_btn_select_n.png'}}" class='editTool_select_img'></image>
+    <text>全选</text>
+  </view>
+  <view class='editTool_remove'>删除</view>
+</view>
+

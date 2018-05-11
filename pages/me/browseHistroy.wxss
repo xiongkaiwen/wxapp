@@ -1,0 +1,101 @@
+/* pages/me/browseHistroy.wxss */
+.browseHistoryLists{
+  padding-left:20rpx ;
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 100rpx;
+}
+.browseHistory_list{
+  overflow: hidden;
+}
+.browseHistory_list_img{
+  float: left;
+  width:210rpx;
+  height: 210rpx;
+}
+.browseHistory_list_right{
+  height:209rpx;
+  float: right;
+  border-bottom: 1px solid #eee;
+  width: 496rpx;
+}
+.browseHistory_date{
+  color: #4D4D4D;
+  font-size: 32rpx;
+  line-height: 70rpx;
+}
+.browseHistory_list_title{
+  width: 496rpx;
+  color:#444;
+  font-size: 32rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.browseHistory_list_titleImg{
+  width:45rpx;
+  height: 23rpx;
+}
+.browseHistory_list_price{
+  color: #F51628;
+  font-size: 30rpx;
+  margin-top: 23rpx;
+}
+.browseHistory_list_cart{
+  width:40rpx;
+  height: 40rpx;
+}
+.browseHistory_list_edit{
+  width: 38rpx;
+  height: 38rpx;
+}
+.browseHistory_list_bottom{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20rpx;
+  margin-top:16rpx;
+}
+.browseHistory_list_lookLike{
+  border:1px solid #eee;
+  padding:4rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+
+.editTool{
+  height: 98rpx;
+  width:100%;
+  border-top:1px solid #eee;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.editTool_remove{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 96rpx;
+  line-height: 96rpx;
+  width: 248rpx;
+  background: #E31C0C;
+  color:#fff;
+  font-size: 30rpx;
+  text-align: center
+}
+.editTool_select{
+  position: absolute;
+  top: 0;
+  left:20rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+.editTool_select_img{
+  width: 38rpx;
+  height: 38rpx;
+  margin-top:4rpx;
+  vertical-align: text-top;
+  margin-right: 4rpx;
+}
