@@ -1,0 +1,28 @@
+<!-- 查看记录列表 -->
+<view class='browseHistoryLists'  scroll-y bindscrolltolower="loadmore">
+  <block wx:for="{{browseHistoryLists}}" wx:for-item="parentItem" wx:for-index="parentIndex">
+    <view>
+      <view class='browseHistory_date'>{{parentItem.date}} </view>
+      <block wx:for="{{parentItem.lists}}">
+        <view class='browseHistory_list'>
+          <navigator>
+            <image class='browseHistory_list_img' src='{{item.imgSrc}}'></image>
+          </navigator>
+          <view class='browseHistory_list_right'>
+            <navigator class='browseHistory_list_title'>
+              {{item.title}} 
+              <image wx:if="{{item.textIcon}}" mode='widthFix' src='{{item.textIcon}}' class='browseHistory_list_titleImg'></image>
+            </navigator>
+            <view class='browseHistory_list_price'>¥{{item.price}}</view>
+            <view class='browseHistory_list_bottom'>
+              <navigator url='/' class='browseHistory_list_lookLike' >看相似</navigator>
+               <image hidden="{{!isEdit}}" class='browseHistory_list_cart' src='../../images/lljl_btn_shoppingcart.png'></image> 
+              
+               <image data-parentIndex='{{parentIndex}}' data-id='{{item.id+index}}' data-selfIndex='{{index}}' bindtap='_toggleSelect' class='browseHistory_list_edit' hidden="{{isEdit}}" src="{{item.isSelect?'../../images/shoppingcar_btn_select_s.png':'../../images/shoppingcar_btn_select_n.png'}}"></image> 
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

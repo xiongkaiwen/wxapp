@@ -1,5 +1,9 @@
 {
   "pages":[    
+        "pages/me/chart",
+    "pages/me/attention",
+
+    "pages/me/attentionGoods",
     "pages/me/browseHistroy",
     "pages/index/index",
     "pages/me/me",
@@ -9,7 +13,10 @@
     "pages/cart/cart",
     "components/firstNavPage/firstPage",
     "components/otherNavPage/otherPage",
-    "components/pageHeader/pageHeader"
+    "components/pageHeader/pageHeader",
+    "components/pageList/pageList",
+    "components/pageHeaderTitle/pageHeaderTitle",
+    "components/shopList/shopList"
   ],
   "window":{
     "backgroundTextStyle":"light",

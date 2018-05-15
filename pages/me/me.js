@@ -17,7 +17,7 @@ Page({
       { url: '/', src: '../../images/me_btn_ddts.png', text: '订单投诉' },
       { url: '/', src: '../../images/me_btn_dzgl.png', text: '地址管理' },
       { url: '/', src: '../../images/me_btn_zhaq.png', text: '账户安全' },
-      { url: '/', src: '../../images/me_btn_lljl.png', text: '浏览记录' },
+      { url: '/pages/me/browseHistroy', src: '../../images/me_btn_lljl.png', text: '浏览记录' },
       { url: '/', src: '../../images/me_btn_shgl.png', text: '审核管理' },
       { url: '/', src: '../../images/me_btn_mhsjbsq.png', text: '卖货商级别申请卖货商级别申请' },
     ]

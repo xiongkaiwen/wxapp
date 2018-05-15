@@ -1,0 +1,55 @@
+
+.shopLists{
+  display: flex;
+}
+.shopsList_img{
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top:5rpx;
+}
+.shop_list{
+  flex: 1;
+  border-bottom: 1px solid #BFBFBF;
+  height: 150rpx;
+  position: relative;
+}
+.shop_list_title{
+  font-size: 30rpx;
+  color: #050101;
+  line-height: 80rpx;
+  height: 80rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+  width:80%;
+}
+.shop_list_info{
+  display: flex;
+  margin-top:16rpx;
+}
+.t1{
+  font-size: 24rpx;
+  color:#666;
+}
+.t2{
+  color:#F51628;
+  font-size: 24rpx;
+}
+.go_shop{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top:60rpx;
+  right: 4rpx;
+}
+.browseHistory_list_edit{
+  width: 38rpx;
+  height: 38rpx;
+  position: absolute;
+  top:80rpx;
+  right: 30rpx;
+}

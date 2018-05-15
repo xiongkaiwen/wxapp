@@ -5,7 +5,14 @@
   bind:pageToolFn="pageToolFn"
 ></pageHeader>
 <!-- 查看记录列表 -->
-<view class='browseHistoryLists'>
+<pageList
+  browseHistoryLists="{{browseHistoryLists}}"
+  bind:toggleSelect="toggleSelect"
+  isEdit="{{isEdit}}"
+></pageList>
+
+
+<!-- <view class='browseHistoryLists'  scroll-y bindscrolltolower="loadmore">
   <block wx:for="{{browseHistoryLists}}" wx:for-item="parentItem" wx:for-index="parentIndex">
     <view>
       <view class='browseHistory_date'>{{parentItem.date}} </view>
@@ -28,12 +35,24 @@
       </block>
     </view>
   </block>
-</view>
+</view> -->
 <view hidden='{{isEdit}}' class='editTool'>
   <view class='editTool_select' bindtap='selectAll'>
     <image src="{{isSelectAll?'../../images/shoppingcar_btn_select_s.png':'../../images/shoppingcar_btn_select_n.png'}}" class='editTool_select_img'></image>
     <text>全选</text>
   </view>
-  <view class='editTool_remove'>删除</view>
+  <view class='editTool_remove' bindtap='removeSelect'>删除</view>
 </view>
+<!-- 是否删除选中浏览记录弹框 -->
+<modal hidden="{{modalHidden}}" confirm-text="确定"  
+cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">  
+  <view  class="modal_text">
+   是否确认删除所选浏览记录  
+  </view>
+</modal> 
+<view style='margin-top:30rpx;'>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+  <view class="loading" hidden="{{searchLoading}}">已加载全部</view>  
+</view>
+
 

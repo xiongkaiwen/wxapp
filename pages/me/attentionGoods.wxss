@@ -1,0 +1,46 @@
+page{
+  padding-top:90rpx;
+}
+
+.editTool{
+  height: 98rpx;
+  width:100%;
+  border-top:1px solid #eee;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.editTool_remove{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 96rpx;
+  line-height: 96rpx;
+  width: 248rpx;
+  background: #E31C0C;
+  color:#fff;
+  font-size: 30rpx;
+  text-align: center
+}
+.editTool_select{
+  position: absolute;
+  top: 0;
+  left:20rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+.editTool_select_img{
+  width: 38rpx;
+  height: 38rpx;
+  margin-top:4rpx;
+  vertical-align: text-top;
+  margin-right: 4rpx;
+}
+.modal_text{
+  text-align: center;
+  font-size: 40rpx;
+}
+.loading{
+  text-align: center;
+}

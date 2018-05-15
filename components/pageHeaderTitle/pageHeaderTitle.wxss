@@ -1,0 +1,29 @@
+.pageHeader{
+  display: flex;
+  height: 90rpx;
+  line-height: 90rpx;
+  justify-content: space-between;
+  padding:0 20rpx;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+.pageHeader_goback{
+  width: 50rpx;
+  height:50rpx;
+  margin-top:22rpx;
+}
+.pageHeader_title{
+  color:#333;
+  font-size: 30rpx;
+  padding: 6rpx 1rpx;
+  margin: 0 16rpx;
+}
+.pageHeader_title.active{
+  color:#333;
+  font-size: 32rpx;
+  border-bottom: 1px solid #333;
+}
+.pageHeader_tool{
+  color:#333;
+  font-size: 32rpx;
+}

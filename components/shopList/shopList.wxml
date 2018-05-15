@@ -1,0 +1,19 @@
+<!-- 查看记录列表 -->
+<view scroll-y bindscrolltolower="loadmore">
+  <block wx:for="{{shopLists}}">
+    <view class='shopLists' id='{{item.id}}'>
+      <navigator  url='{{item.url}}'>
+        <image src='{{item.src}}' class='shopsList_img'></image>
+      </navigator>
+      <view class='shop_list'>
+        <navigator class='shop_list_title'>{{item.title}}</navigator>
+        <view class='shop_list_info'>
+          <view class='t1'>{{item.humans}}人关注</view>
+          <view class='t1' style='margin-left:30rpx;'>综合评分：<text class='t2'>{{item.grade}}</text></view>
+        </view>
+        <image hidden='{{!isEdit}}' class='go_shop' src='../../images/details_btn_more.png'></image>
+        <image data-id='{{item.id+index}}' data-selfIndex='{{index}}' bindtap='_toggleSelect' class='browseHistory_list_edit' hidden="{{isEdit}}" src="{{item.isSelect?'../../images/shoppingcar_btn_select_s.png':'../../images/shoppingcar_btn_select_n.png'}}"></image>
+      </view>
+    </view>
+  </block>
+</view>

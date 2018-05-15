@@ -2,7 +2,8 @@
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
   "usingComponents": {
-    "pageHeader": "/components/pageHeader/pageHeader",
+    "pageHeaderTitle": "/components/pageHeaderTitle/pageHeaderTitle",
+    "shopList": "/components/shopList/shopList",
     "pageList": "/components/pageList/pageList"
   }
 }
