@@ -1,2 +1,48 @@
 <!--pages/me/chart.wxml-->
-<text>pages/me/chart.wxml</text>
+<!-- 我的头部展示部分 -->
+<view class='meHeader'>
+  <view class='meHeader_content'>
+    <view class='meHeader_tool'>
+      <image class='meHeader_msg' src='../../images/me_btn_msg.png'></image>
+      <image class='meHeader_setting' src='../../images/me_btn_setting.png'></image>
+    </view>
+    <view class='meHeader_personMess'>
+      <image class='myHeader_personHeader' src='../../images/me_avatar.png'></image>
+      <view class='myHeader_person_mess'>
+        <view class='myHeader_person_name'>
+          夏莎mm丶
+        </view>
+        <view class='myHeader_person_id'>060601060101</view>
+        <view class='myHeader_person_degree'>普通会员</view>
+      </view>
+    </view>
+  </view>
+  <image class='meHeader_bg' src='../../images/me_bg.png'></image>
+</view>
+<!-- 金额progress -->
+<view class='moneyProgress'>
+  <view class='moneyProgress_title'>商品消费额</view>
+  <view class='moneyProgress_money'>
+    <text class='t1'>2500</text>/<text class='t2'> 3000</text>
+  </view>
+  <view class='view1'>
+    <progress percent="80" stroke-width="12" active activeColor='#E60012'/>
+  </view>
+  <view class='t3'>
+    距升级VIP会员还需消费 500 元
+  </view>
+</view>
+<view class='row'></view>
+
+
+
+<!-- 金额曲线图 -->
+<view class="container">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  <view class='canvas_tips'>
+     <text class='canvas_tips_row'></text>消费额(元)
+  </view>
+</view> 
+<view class='canvas_title'>消费折线图
+  <text class='canvas_grade'>经理</text>
+</view>

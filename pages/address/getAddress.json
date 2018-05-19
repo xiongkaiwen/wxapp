@@ -1,1 +1,5 @@
-{}
+{
+      "usingComponents": {
+        "pageHeader": "/components/pageHeader/pageHeader"
+      }
+}

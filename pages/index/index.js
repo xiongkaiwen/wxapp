@@ -1,4 +1,3 @@
-var bmap = require('../../lib/bmap-wx.min.js');
 Page({
   data:{
     position:"自动定位失败...",
@@ -18,7 +17,7 @@ Page({
     ],
     bannerLists: [
       {
-        url: '/',
+        url: '/pages/shopsDetail/shopsDetail',
         src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       },
       {

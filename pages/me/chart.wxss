@@ -1,1 +1,165 @@
 /* pages/me/chart.wxss */
+ec-canvas {
+  width:115%;
+  height: 600rpx;
+  z-index: 2;
+}
+.container {
+  position: absolute;
+  top: 700rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 2;
+} 
+
+.moneyProgress_title{
+  color:#333;
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #eee;
+  padding-left: 30rpx;
+}
+.moneyProgress_money{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+  margin:20rpx 0;
+}
+.t1,.t2{
+  font-size: 30rpx;
+  color:#999;
+  padding: 0 10rpx;
+}
+.t1{
+  color: #F61628;
+}
+.t3{
+  padding-left: 30rpx;
+  font-size: 26rpx;
+  color:#333;
+  margin-top: 26rpx;
+}
+.view1{
+  margin:0 30rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+}
+
+.row{
+  height: 10rpx;
+  background: #f0f0f0;
+  margin-top: 50rpx;
+}
+
+.canvas_title{
+  position:absolute;
+  top:666rpx;
+  padding-left:31rpx;
+  z-index:99999;
+  color:#333;
+  font-size: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.canvas_grade{
+  float: right;
+  color:#999;
+  font-size: 30rpx;
+  margin-right: 30rpx;
+}
+.canvas_tips{
+  position:  absolute;
+  bottom: 0;
+  right: 0;
+  color:#333;
+  font-size: 22rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+.canvas_tips_row{
+  width:30rpx;
+  height:2rpx;
+  background:#E60012;
+  position:absolute;
+  top:18rpx;
+  left:-36rpx;
+}
+
+
+
+/* pages/me/me.wxss */
+.meHeader{
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+}
+.meHeader_bg{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:320rpx;
+}
+.meHeader_content{
+  position: absolute;
+  top:20rpx;
+  left: 0;
+  width: 100%;
+  height:300rpx;
+  z-index: 2;
+}
+.meHeader_tool{
+  overflow: hidden;
+  height: 38rpx;
+  width: 100%;
+}
+.meHeader_setting{
+  float: right;
+  width: 38rpx;
+  height:38rpx;
+  margin-right: 40rpx;
+}
+.meHeader_msg{
+  float: right;
+  width:38rpx;
+  height: 38rpx;
+  margin-right: 30rpx;
+}
+.meHeader_personMess{
+  height:160rpx;
+  width:100%;
+  overflow: hidden;
+  margin-top: 36rpx;
+}
+.myHeader_personHeader{
+  width:160rpx;
+  height: 160rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-right: 24rpx;
+}
+.myHeader_person_mess{
+  float: left;
+}
+.myHeader_person_name{
+  color:#fefefe;
+  font-size: 32rpx;
+  margin-top:24rpx;
+}
+.myHeader_person_id{
+  color:#fefefe;
+  font-size: 30rpx;
+}
+.myHeader_person_degree{
+  color:#FAB0B0;
+  font-size: 26rpx;
+}

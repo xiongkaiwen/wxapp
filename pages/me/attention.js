@@ -72,6 +72,14 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
   },
+  //滚动到底部下载更多
+  loadmore: function () {
+    console.log('loadmore')
+  },
+  //上拉触底
+  onReachBottom: function () {
+    console.log(111)
+  },
   //删除数组中的某个元素
   deleteArray(initArray, obj) {
     let initIndex = -1;
@@ -192,14 +200,6 @@ Page({
     this.setData({
       modalHidden: true
     })
-  },
-  //滚动到底部下载更多
-  loadmore: function () {
-    console.log('loadmore')
-  },
-  //上拉触底
-  onReachBottom: function () {
-    console.log(111)
   },
   //返回个人中心
   goBack:function(){

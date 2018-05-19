@@ -8,12 +8,12 @@ Component({
    */
   properties: {
     pageTitle:{
-      type:String,
-      value:'标题'
+      type:Array,
+      value:[]
     },
-    pageTool:{
-      type: String,
-      value: ''
+    initIndex:{
+      type:Number,
+      value:0
     }
   },
 
@@ -42,15 +42,21 @@ Component({
       //触发成功回调
       this.triggerEvent("confirmEvent");
     },
+    //标题切换
+    toggleTitle(e){
+      let obj={
+        val:e
+      }
+      this.triggerEvent("toggleTitle",{obj});
+    },
     //头部按钮点击事件
-    pageTool:function(){
+    pageTool: function () {
       this.triggerEvent("pageToolFn");
     },
-    //返回按钮
-    _goBack:function(){
-      this.triggerEvent("goBack");
+    //返回按钮点击事件
+    goBack:function(){
+      this.triggerEvent("goBack")
     }
-
 
   }
 })

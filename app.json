@@ -1,15 +1,16 @@
 {
-  "pages":[    
-        "pages/me/chart",
+  "pages":[ 
+      "pages/address/getAddress",
+    "pages/index/index",
+    "pages/shopsDetail/shopsDetail",
+    "pages/me/chart",
     "pages/me/attention",
-
     "pages/me/attentionGoods",
     "pages/me/browseHistroy",
-    "pages/index/index",
     "pages/me/me",
     "pages/classify/classify",
     "pages/search/search",
-    "pages/address/getAddress",
+  
     "pages/cart/cart",
     "components/firstNavPage/firstPage",
     "components/otherNavPage/otherPage",

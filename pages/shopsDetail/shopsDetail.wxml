@@ -1,0 +1,209 @@
+<!--pages/shopsDetail/shopsDetail.wxml-->
+<!-- 头部导航 -->
+<view>
+<shopsDetail
+  pageTitle="{{pageTitle}}"
+  initIndex="{{initIndex}}"
+  bind:toggleTitle="toggleTitle"
+  bind:goBack="goBack"
+  bind:pageToolFn="pageToolFn"
+></shopsDetail>
+</view>
+
+
+<!-- 轮播图展示 -->
+ <swiper style='height:750rpx;margin-top:90rpx;' indicator-dots="true"
+  autoplay="true" interval="3000" duration="500"
+  indicator-color="white" indicator-active-color="#F61628"
+  id='data-0'
+  >
+    <block wx:for="{{bannerLists}}">
+      <swiper-item>
+        <navigator url="{{item.url}}">
+            <image src="{{item.src}}" style='width:100%;height:750rpx;' class="slide-image"/>
+        </navigator>
+      </swiper-item>
+    </block>
+</swiper>
+<view class='shops_info'>
+  <view class='shops_title' selectable='true'>
+  湿爽肤水乳 液护肤品官网正品
+  <image src='../../images/details_img_frank.png'/>
+  </view>
+  <view class='text_row'>
+    <view class='t1'>¥ 199.99</view>
+    <view class='t2'>分享购买可获4元佣金+0积分</view>
+  </view>
+  <view class='text_row'>
+    <view class='t3'>¥ 299.99</view>
+    <view class='t4'>库存1000 | 已售333</view>
+  </view>
+
+</view> 
+<!-- 点击复制文字 -->
+ <view class='getClipboard'>
+  <view class='getClipboard_title'>
+    <text>产品百科</text>
+    <view class='setClipboard' bindtap='setClipboard'>点击复制</view>
+  </view>
+  <view class='getClipboard_text'>{{getClipboardText}}</view>
+</view> 
+<!-- 区域选择e -->
+<view class='shops_area'>
+  <view class='shopsIntegral'>
+    <view class='shops_integral'>积分</view>
+    <text>购买可获得66积分</text>
+  </view>
+  <view class='shops_row'>
+    <text class='left'>可配送区域</text>
+    <view class='right'>
+      <image src='../../images/nav_localize_n@2x.png' class='shops_row_icon'/>
+      {{areaText}}
+    </view>
+  </view>
+  <view class='shops_row'>
+    <text class='left'>切换区域</text>
+    <view class='right' style='width:auto'>
+      <image src='../../images/details_btn_more.png' class='shops_row_toggleIcon'/>
+    </view>
+  </view>
+</view> 
+<!-- 商品评价 -->
+<view class='shopsEvaluate' id='data-1'>
+  <view class='shops_evaluate_title'>商品评价</view>
+  <view class='shops_evaluateList'>
+    <view class='shops_grade'>
+      <view class='left'>
+        <image src='../../images/shop_icon_score_full.png' />
+        <image src='../../images/shop_icon_score_full.png' />
+        <image src='../../images/shop_icon_score_full.png' />
+        <image src='../../images/shop_icon_score_full.png' />
+        <image src='../../images/shop_icon_score_half.png' />
+        <text>4.8</text>
+      </view>
+      <view class='right'>123条评论</view>
+    </view>
+    <view class='shops_buyer'>
+      <image src='../../images/me_avatar.png'/>
+      <text>175****9669</text>
+    </view>
+    <view class='shops_evaluate_text'>{{shopsEvaluateText}}</view>
+    <navigator class='look_all' url='/'>查看全部 <image src="../../images/details_btn_more.png" /> </navigator>
+  </view>
+</view>
+<!-- 商家店铺 -->
+<view class='store'>
+  <view class='store_info'>
+    <view class='left'>
+      <image src='../../images/goods.jpg' class='store_img'/>
+      <view class='right'>
+        <view class='store_title'>夏莎衣橱</view>
+        <view class='store_title'>主营：服饰箱包</view>
+      </view>
+    </view>
+    <navigator class='right'>
+      进店逛
+    </navigator>
+  </view>
+  <view class='store_grade'>
+    <view>商品评分：<text>5</text></view>
+    <view>时效评分：<text>4.5</text></view>
+    <view>服务评分：<text>4.9</text></view>
+  </view>
+</view>
+<!-- 详情 -->
+<view id='data-2'>
+  <image src='../../images/ad.png' style='width:100%;' mode='widthFix'></image>
+</view>
+<!-- 为您推荐 -->
+<view class='recommend'>
+  <view class='recommend_title'>为您推荐</view>
+  <view class='recommendLists'>
+    <block wx:for="{{recommendLists}}">
+      <navigator url='{{item.url}}' 
+      class="recommend_list {{index%3==1?'recommend_list_middle':''}}">
+        <image class='recommend_list_img' src='{{item.src}}'></image>
+        <view  class='recommend_list_title'>{{item.title}}</view>
+        <view class='recommend_list_price'>¥<text>{{item.price}}</text></view>
+      </navigator>
+    </block>
+  </view>
+</view>
+    <navigator class='look_all' url='/'>查看更多 <image src="../../images/details_btn_more.png" /> </navigator>
+
+<!-- 底部导航 -->
+ <view class='footer'>
+  <navigator class='footer_left'>
+    <image src='../../images/details_tab_home.png'></image>
+    <view class='footer_left_text'>首页</view>
+  </navigator>
+  <navigator class='footer_left'>
+    <image src='../../images/details_tab_seller.png'></image>
+    <view class='footer_left_text'>客服</view>
+  </navigator>
+  <view class='footer_left' bindtap='toggleSelect'>
+    <image src="{{isSelect?'../../images/details_tab_focus_s.png':'../../images/details_tab_focus_n.png'}}"></image>
+    <view class="footer_left_text {{isSelect?'isSelect':''}}">关注</view>
+  </view>
+  <view class='footer_right'>
+    <image src='../../images/details_bg_add.png'></image>
+    <view>立即购买</view>
+  </view>
+  <view class='footer_right' bindtap='addCart'>
+    <image src='../../images/details_bg_buy.png'></image>
+    <view>加入购物车</view>
+  </view>
+</view> 
+
+<!-- 添加购物车 -->
+<view hidden='{{addCart}}' class='addCart' catchtap='addCartBody'>
+</view>
+<view hidden='{{addCart}}' class='addCart_body'>
+  <view class='addCart_info'>
+    <image src='../../images/goods.jpg' class='addCart_info_img'></image>
+    <view class='right'>
+      <view class='addCart_info_title'>韩束巨水光化妆品套装女深层补 水保湿爽肤水乳液护肤品韩束巨水光化妆品套装女深层补 水保湿爽肤水乳液护肤品</view>
+      <view class='addCart_info_price'>
+        <text class='addCart_info_t1'>¥199.99</text>
+        <text class='addCart_info_t2'>¥299.99</text>
+      </view>
+    </view>
+  </view>
+  <view class='addCartClassify'>
+    <view class='addCart_classify_title'>套餐分类</view>
+    <scroll-view scroll-y="true" class='addCartClassifyList'>
+      <block wx:for="{{combs}}">
+        <view class="addCartClassify_list {{combsInit==index?'active':''}}" id='{{item.id}}'>{{item.text}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class='addCartClassify'>
+    <view class='addCart_classify_title'>规格分类</view>
+    <scroll-view scroll-y="true" class='addCartClassifyList'>
+      <block wx:for="{{specificationes}}">
+        <view class="addCartClassify_list {{specificationInit==index?'active':''}}" id='{{item.id}}'>{{item.text}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class='addCartNum'>
+    <view class='addCartNum_title'>购买数量</view>
+    <view class='addCart_num'>
+      <view class='left'>库存：<text>1000</text></view>
+      <view class='right'>
+        <view class='addCart_num_reduce' bindtap='onReduce'>-</view>
+        <input type='number' value='{{cartNum}}' bindblur="onBlur" class='addCart_num_input' bindfocus='onFocus'></input>
+        <view class='addCart_num_add' bindtap='onAdd'>+</view>
+      </view>
+    </view>
+  </view>
+  <view class='addCartOk' bindtap='addCartOk'>
+    确定
+  </view>
+</view>
+
+<modal hidden="{{modalHidden}}" confirm-text="确定"  
+cancel-text="取消" bindconfirm="modalBindcancel" bindcancel="modalBindcancel">  
+  <view  class="modal_text">
+   {{tips}}  
+  </view>
+</modal> 
