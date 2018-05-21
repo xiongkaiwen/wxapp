@@ -1,22 +1,25 @@
 {
   "pages":[ 
-      "pages/address/getAddress",
+    "pages/cart/cart",
+    "pages/me/me",
+    "pages/brandShop/brandShop",
     "pages/index/index",
+    "pages/address/getAddress",
     "pages/shopsDetail/shopsDetail",
     "pages/me/chart",
     "pages/me/attention",
     "pages/me/attentionGoods",
     "pages/me/browseHistroy",
-    "pages/me/me",
+
     "pages/classify/classify",
     "pages/search/search",
   
-    "pages/cart/cart",
     "components/firstNavPage/firstPage",
     "components/otherNavPage/otherPage",
     "components/pageHeader/pageHeader",
     "components/pageList/pageList",
     "components/pageHeaderTitle/pageHeaderTitle",
+    "components/searchHeader/searchHeader",
     "components/shopList/shopList"
   ],
   "window":{

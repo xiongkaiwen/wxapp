@@ -11,7 +11,7 @@ Page({
     },
     meServerLists:[
       { url: '/',src:'../../images/me_btn_wykd.png',text:'我要开店'},
-      { url: '/', src: '../../images/me_btn_wdgz.png', text: '我的关注' },
+      { url: '/pages/me/attentionGoods', src: '../../images/me_btn_wdgz.png', text: '我的关注' },
       { url: '/', src: '../../images/me_btn_wdye.png', text: '我的余额' },
       { url: '/', src: '../../images/me_btn_wdjf.png', text: '我的积分' },
       { url: '/', src: '../../images/me_btn_ddts.png', text: '订单投诉' },

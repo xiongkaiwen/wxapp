@@ -103,7 +103,7 @@ Page({
     let selectArea = wx.getStorageSync('selectArea');
     if (selectArea && selectArea != '') {
       that.setData({
-        position: selectArea
+        position: selectArea.text
       })
     };
 
@@ -125,7 +125,7 @@ Page({
   //选择区域
   goSelectArea:function(){
     wx.navigateTo({
-      url: '/page/address/getAddress',
+      url: '/pages/address/getAddress',
     })
   },
   //搜索页面

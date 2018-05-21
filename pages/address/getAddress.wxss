@@ -31,3 +31,6 @@ page{
   display: flex;
   flex-wrap: wrap;
 }
+.modal_text{
+  text-align: center
+}

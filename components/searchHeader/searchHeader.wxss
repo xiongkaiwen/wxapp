@@ -1,0 +1,36 @@
+.pageHeader{
+  display: flex;
+  height: 90rpx;
+  line-height: 90rpx;
+  justify-content: space-between;
+  padding:0 20rpx;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+.pageHeader_goback{
+  width: 50rpx;
+  height:50rpx;
+  margin-top:22rpx;
+}
+.pageHeader_bg{
+  background: #EEEEEE;
+  border-radius: 100rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60vw;
+  align-self: center
+}
+.pageHeader_bg image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.pageHeader_bg text{
+  color:#aaa;
+  font-size: 26rpx;
+}
+.pageHeader_tool{
+  color:#333;
+  font-size: 32rpx;
+}

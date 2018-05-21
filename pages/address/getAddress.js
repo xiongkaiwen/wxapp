@@ -14,7 +14,10 @@ Page({
       { grade: 2, id: 0 },
       { grade: 3, id: 0 },
       { grade: 4, id: 0 },
-    ]
+    ],
+    hiddenLoading:true,
+    modalHidden:true,
+    tips:"数据加载失败"
   },
 
   /**
@@ -46,30 +49,52 @@ Page({
   },
   //地区选择
   areaSelect:function(e){
+    this.setData({
+      hiddenLoading:false
+    })
     const that =this;
     let gradeArr = that.data.preId;
     let id =e.target.id;
     let parentId = e.target.dataset.parentid;
+    let text = e.target.dataset.val;
     let data={
       parentId:id
     }
     app.util.request(app.api.areaList+"/?parentId="+id).then(function (res) {
-      if(res.data && res.data.length>0){
+      if(res.status==1 && res.status){
         that.setData({
-          areas: res.data,
-          areaGrade: that.data.areaGrade+1
+          hiddenLoading: true
         });
-        gradeArr.forEach(function(val,index){
-          if(val.grade==that.data.areaGrade){
-            gradeArr[index].id=id;
+        if (res.data && res.data.length > 0) {
+          that.setData({
+            areas: res.data,
+            areaGrade: that.data.areaGrade + 1
+          });
+          gradeArr.forEach(function (val, index) {
+            if (val.grade == that.data.areaGrade) {
+              gradeArr[index].id = id;
+            }
+          });
+          that.setData({
+            preId: gradeArr,
+          });
+        }else{
+          let address={
+            id:id,
+            text:text
           }
-        });
-        that.setData({
-          preId:gradeArr
-        });
-        console.log(that.data.preId)
+          wx.setStorageSync('selectArea', address);
+          wx.switchTab({
+            url: '/pages/index/index',
+          });
+        }
       }
+
     }).catch(function (err) {
+      that.setData({
+        hiddenLoading:true,
+        modalHidden:false
+      })
       console.log(err)
     })
   },
@@ -92,6 +117,12 @@ Page({
   //返回上一页
   goBack:function(){
     
+  },
+  //隐藏对话框
+  modalBindcancel:function(){
+    this.setData({
+      modalHidden:true
+    })
   }
 
 })

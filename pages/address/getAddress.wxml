@@ -16,7 +16,14 @@
   </view>
   <view class='address_area'>
     <block wx:for="{{areas}}">
-      <view class="address_list {{index%3==1?'middle':''}}" data-parentId="{{item.parentId}}" id='{{item.areaId}}' bindtap='areaSelect'>{{item.areaName}}</view>
+      <view class="address_list {{index%3==1?'middle':''}}" data-val="{{item.areaName}}" data-parentId="{{item.parentId}}" id='{{item.areaId}}' bindtap='areaSelect'>{{item.areaName}}</view>
     </block>
   </view>
 </view>
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<modal hidden="{{modalHidden}}" confirm-text="确定"  
+cancel-text="取消" bindconfirm="modalBindcancel" bindcancel="modalBindcancel">  
+  <view  class="modal_text">
+   {{tips}}  
+  </view>
+</modal> 

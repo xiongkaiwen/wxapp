@@ -9,5 +9,4 @@ module.exports={
   //地址列表
   //输入参数	parentId：父ID
   areaList: domainUrl +"areas/listQuery",
-
 }

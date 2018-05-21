@@ -14,11 +14,11 @@
   <!--二级导航-->
 <view style='background:#fff'>
   <view class="second_navs">
-    <!-- 如果二级导航长度大于10这显示显示隐藏功能 -->
-    <block wx:if="{{secondNav.length>10}}">
+    <!-- 如果二级导航长度大于6这显示显示隐藏功能 -->
+    <block wx:if="{{secondNav.length>6}}">
         <block wx:if="{{toggleLength}}">
           <block wx:for="{{secondNav}}">
-            <navigator wx:if="{{index<9}}" class="second_nav" url="{{item.url}}">
+            <navigator wx:if="{{index<4}}" class="second_nav" url="{{item.url}}">
                 <image src="{{item.src}}"/>
                 <text>{{item.text}}</text>
             </navigator>
@@ -44,7 +44,6 @@
             <text>全部</text>
           </view>
         </block>
-      
     </block>
     <block wx:else>
       <block wx:for="{{secondNav}}">

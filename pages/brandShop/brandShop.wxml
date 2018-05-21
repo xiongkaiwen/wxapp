@@ -1,0 +1,94 @@
+<!--pages/address/getAddress.wxml-->
+<searchHeader
+  searchTitile='请输入店铺名称'
+  bind:goBack="goBack"
+  bind:search="search"
+>
+</searchHeader>
+
+<!-- 二级导航 -->
+<view class="second_navs">
+  <!-- 如果二级导航长度大于6这显示显示隐藏功能 -->
+  <block wx:if="{{secondNav.length>6}}">
+      <block wx:if="{{toggleLength}}">
+        <block wx:for="{{secondNav}}">
+          <navigator wx:if="{{index<4}}" class="second_nav" url="{{item.url}}">
+              <image src="{{item.src}}"/>
+              <text>{{item.text}}</text>
+          </navigator>
+          <view bindtap='toggleLength' class="second_nav" wx:if="{{index==10}}">
+            <view class='toggleLength'>
+              <image src='../../images/classify_btn_all.png'></image>
+            </view> 
+            <text>全部</text>
+          </view>
+        </block>
+      </block>
+      <block  wx:if="{{!toggleLength}}">
+        <block wx:for="{{secondNav}}">
+          <navigator class="second_nav" url="{{item.url}}">
+              <image src="{{item.src}}"/>
+              <text>{{item.text}}</text>
+          </navigator>
+        </block>
+        <view bindtap='toggleLength' class="second_nav">
+          <view class='toggleLength'>
+            <image src='../../images/classify_btn_closed.png'></image>
+          </view> 
+          <text>全部</text>
+        </view>
+      </block>
+  </block>
+  <block wx:else>
+    <block wx:for="{{secondNav}}">
+      <navigator class="second_nav" url="{{item.url}}">
+          <image src="{{item.src}}"/>
+          <text>{{item.text}}</text>
+        </navigator>
+    </block>
+  </block>
+</view>
+<!-- 店铺列表 -->
+<view class='brandLists'>
+  <view class='toggleEvalute' bindtap='toggleEvalute'>
+    <text>好评度</text>
+    <image src="{{select==0?'/images/condiNav.png':select==1?'/images/condiNav_up.png':'/images/condiNav_down.png'}}" class='evalute_img'></image>
+  </view>
+  <view class='brand_list'>
+    <view class='brand_list_top'>
+      <image class='brand_shop_header' src='/images/me_avatar.png' mode='aspectFit'></image>
+      <view>
+        <view class='brand_shop_name'>夏莎美妆</view>
+        <view class='brand_shop_evalute'>综合评分：<text>4.5</text></view>
+      </view>
+      <view class='go_shop'>进店逛</view>
+    </view>
+    <view class='brand_list_body'>
+      <view class='brand_list_show'>
+        <image src='/images/goods.jpg'></image>
+        <text class='brand_goods_price'>¥199.99</text>
+      </view>
+      <view class='brand_list_show'>
+        <image src='/images/goods.jpg'></image>
+      </view>
+      <view class='brand_list_show'>
+        <image src='/images/goods.jpg'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<modal hidden="{{modalHidden}}" confirm-text="确定"  
+cancel-text="取消" bindconfirm="modalBindcancel" bindcancel="modalBindcancel">  
+  <view  class="modal_text">
+   {{tips}}  
+  </view>
+</modal> 
