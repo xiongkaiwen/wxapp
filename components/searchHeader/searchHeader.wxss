@@ -30,6 +30,9 @@
   color:#aaa;
   font-size: 26rpx;
 }
+
+
+
 .pageHeader_tool{
   color:#333;
   font-size: 32rpx;

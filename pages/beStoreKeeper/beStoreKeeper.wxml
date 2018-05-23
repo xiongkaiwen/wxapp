@@ -1,0 +1,9 @@
+<!-- 头部 -->
+<shareHeader
+  title="成为店主"
+  bind:goBack="goBack"
+>
+</shareHeader>
+<!-- 广告图 -->
+<image src='/images/goods.jpg' mode='widthFix' style='width:100%;'></image>
+

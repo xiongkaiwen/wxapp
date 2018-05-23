@@ -1,0 +1,4 @@
+/* pages/address/getAddress.wxss */
+page{
+  padding-top: 90rpx;
+}

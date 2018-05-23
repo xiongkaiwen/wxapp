@@ -109,3 +109,45 @@ page{
   bottom: 0;
   left: 14rpx;
 }
+
+
+.fixFooter{
+  border-top: 1px solid #bfbfbf;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.fixFooter_select{
+  font-size: 30rpx;
+  color:#666;
+}
+.fixFooter_select image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.fixFooter_right{
+  display: flex;
+  color: #E60012;
+  font-size: 30rpx;
+}
+.fixFooter_btn{
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #666;
+  color:#fff;
+  width: 200rpx;
+  text-align: center;
+  margin-left: 50rpx;
+}
+.fixFooter_btn.select{
+  background: #E60012;
+}

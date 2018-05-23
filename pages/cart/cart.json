@@ -2,6 +2,7 @@
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark",
     "usingComponents": {
-      "pageHeader": "/components/pageHeader/pageHeader"
+      "pageHeader": "/components/pageHeader/pageHeader",
+      "selfModal":"/components/modal/modal"
     }
 }

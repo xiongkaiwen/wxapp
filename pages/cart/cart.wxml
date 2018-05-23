@@ -50,6 +50,21 @@
 
 <!-- 底部固定 -->
 <view class='fixFooter'>
-
+    <view class='fixFooter_select' bindtap='toggleSelectAll'>
+      <image src="{{isSelectAll?'/images/shoppingcar_btn_select_s.png':'/images/shoppingcar_btn_select_n.png'}}"></image>
+      全选
+    </view>
+    <view class='fixFooter_right'>
+      ¥0.00
+      <view bindtap='selectOrDelete' class="fixFooter_btn {{selectedId.length>0?'select':''}}">{{isEdit?'删除':'结算'}}</view>
+    </view>
 </view>
 
+<selfModal
+  tips="确定删除？"
+  modalHidden="{{modalHidden}}"
+  bind:modalBindconfirm="modalBindconfirm"
+  bind:modalBindcancel="modalBindcancel"
+>
+
+</selfModal>

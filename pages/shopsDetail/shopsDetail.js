@@ -110,10 +110,11 @@ Page({
   },
   //切换标题 锚点跳转
   toggleTitle:function(e){  
+    let locations = this.data.titleLocation;
     //如果点击标题不等于推荐则不锚点跳转
     if (e.detail.obj.val.target.id!=3){
       wx.pageScrollTo({
-        scrollTop: this.data.titleLocation[e.detail.obj.val.target.id] - 50,
+        scrollTop: locations[e.detail.obj.val.target.id] - 50,
         duration: 100
       })
     }
@@ -134,7 +135,6 @@ Page({
     this.setData({
       titleLocation:arr
     })
-    
   },
   //复制文字
   setClipboard:function(){

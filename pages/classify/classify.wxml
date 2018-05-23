@@ -1,37 +1,76 @@
 <view>
   <!-- 分类头部 -->
   <view class='classifyHeader'>
-      <image class='classify_search_icon' src='../../images/home_nav_search.png'></image>
-      <view bindtap='classifySelect' class='classify_search_select'>
-        <view class="{{classifySelected?'active':''}}">分类</view>
-        <view class="{{classifySelected?'':'active'}}">品牌</view>
+      <image bindtap='toggleSearch' class='classify_search_icon' src='../../images/home_nav_search.png'></image>
+      <view hidden='{{isSearch}}'  bindtap='classifySelect' class='classify_search_select'>
+        <view class="{{classifySelected?'':'active'}}">分类</view>
+        <view class="{{classifySelected?'active':''}}">品牌</view>
       </view> 
+      <view hidden='{{!isSearch}}'>
+          <view class='pageHeader_bg' bindtap='search'>
+            <image src='../../images/home_nav_search.png'></image>
+            <text>请输入搜索内容</text>
+          </view>
+      </view>
       <!-- <view class='classify_searchInput'>
         <image src='../../images/classify_nav_search.png'></image>
         请输入关键字
       </view> -->
   </view>
-  <!-- 左侧导航 -->
-  <scroll-view scroll-y="true" class='classifySlider'>
-      <block wx:for='{{classifySlider}}'>
-        <view bindtap='classifySlider' class="classifySlider_nav {{item.id==classifySliderIndex?'active':''}}" data-id='{{item.id}}'>{{item.text}}</view>
-      </block>
-  </scroll-view>
-  <!-- 右侧内容展示 -->
-  <view class='classify_content'>
-    <image style='height:157rpx;width:100%;' mode='widthFix' src='../../images/ad.png'></image>
-    <view class='classify_content_title'>
-      <text class='classify1'>新鲜水果</text>
-      <navigator class='goMore'>热销榜<image style='width:38rpx;height:38rpx;' src='../../images/details_btn_more.png'></image></navigator>
-    </view>
-    <view class='classifyShopLists'>
-      <block wx:for="{{classifyShopLists}}">
-        <navigator url='/' class='classify_shopList'>
-          <image src='{{item.src}}' mode='widthFix'></image>
-          <text>{{item.text}}</text>
-        </navigator>
-      </block>
+
+
+  <!-- 分类 -->
+  <view hidden='{{classifySelected}}'>
+    <!-- 左侧导航 -->
+    <scroll-view scroll-y="true" class='classifySlider'>
+        <block wx:for='{{classifySlider}}'>
+          <view bindtap='classifySlider' class="classifySlider_nav {{item.id==classifySliderIndex?'active':''}}" data-id='{{item.id}}'>{{item.text}}</view>
+        </block>
+    </scroll-view>
+    <!-- 右侧内容展示 -->
+    <view class='classify_content'>
+      <image style='height:157rpx;width:100%;' mode='widthFix' src='../../images/ad.png'></image>
+      <view class='classify_content_title'>
+        <text class='classify1'>新鲜水果</text>
+        <navigator class='goMore'>热销榜<image style='width:38rpx;height:38rpx;' src='../../images/details_btn_more.png'></image></navigator>
+      </view>
+      <view class='classifyShopLists'>
+        <block wx:for="{{classifyShopLists}}">
+          <navigator url='/' class='classify_shopList'>
+            <image src='{{item.src}}' mode='widthFix'></image>
+            <text>{{item.text}}</text>
+          </navigator>
+        </block>
+      </view>
     </view>
   </view>
+  <!-- 品牌 -->
+  <view class='brandLists'  hidden='{{!classifySelected}}'>
+    <image style='width:100%;' src='/images/goods.jpg' mode='widthFix'></image>
+    <view class='brandLists_show'>
+      <view class='brandLists_left'>
+      <block wx:for="{{brandLists}}">
+        <view class='brand_list'>
+          <view class='brand_list_title' id='{{item.id}}'>{{item.text}}</view>
+          <view class='brand_list_content'>
+            <block wx:for="{{item.lists}}">
+              <view  class="brand_list_content_list {{index%3==1?'middle':''}}" id='{{item.id}}'>
+                <image src='{{item.src}}'></image>
+                <view>{{item.text}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+      </view>
+      <view class="brandLists_right {{isFixed?'fixed':''}}" id='brandListRight'>
+        <block wx:for="{{brandListsRight}}">
+            <view id='{{item.id}}' data-index="{{index}}" bindtap='goGrandTitle'>{{item.text}}</view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+
 </view>
 

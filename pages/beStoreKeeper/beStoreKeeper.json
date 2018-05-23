@@ -1,0 +1,5 @@
+{
+      "usingComponents": {
+        "shareHeader": "/components/shareHeader/shareHeader"
+      }
+}

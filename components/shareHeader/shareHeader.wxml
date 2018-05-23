@@ -1,0 +1,14 @@
+<!-- 页面头部 -->
+<view style='position:fixed;width:100%;height:90rpx;top:0;z-index:3'>
+  <view>
+    <view class='pageHeader'>
+      <image bindtap='goBack' class='pageHeader_goback' src='../../images/nav_btn_back_new.png'></image>
+      <text class='title'>{{text}}</text>
+      <view style='position:relative'>
+        <button plain="true" class='shareBtn' open-type='share'></button>
+        <image src='../../images/activity298_nav_share.png' class='pageHeader_tool' bindtap='pageTool' />
+      </view>
+
+    </view>
+  </view>
+</view>

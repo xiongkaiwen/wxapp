@@ -1,8 +1,8 @@
 {
 	"enablePullDownRefresh":true,
   "backgroundTextStyle": "dark",
-    "usingComponents": {
-      "firstPage": "/components/firstNavPage/firstPage",
-      "otherPage": "/components/otherNavPage/otherPage"
-    }
+  "usingComponents": {
+    "firstPage": "/components/firstNavPage/firstPage",
+    "otherPage": "/components/otherNavPage/otherPage"
+  }
 }

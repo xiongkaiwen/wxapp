@@ -118,3 +118,77 @@
   line-height: 40rpx;
   margin-bottom: 10rpx;
 }
+
+
+.brandLists{
+  padding:0 30rpx;
+  padding-top: 90rpx;
+}
+.brandLists_show{
+  display: flex;
+}
+.brandLists_right{
+  width: 68rpx;
+}
+.brandLists_right>view{
+  color:#666;
+  font-size: 22rpx;
+}
+.brand_list{
+  margin-top: 30rpx;
+}
+.brand_list_content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.brand_list_title{
+  margin-bottom: 10rpx;
+}
+.brand_list_content_list>view{
+  text-align: center;
+  font-size: 20rpx;
+  color:#050101;
+}
+.brand_list_content_list.middle{
+  margin:0 40rpx;
+}
+.brand_list_content_list>image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+
+.brandLists_right{
+  margin-top:40rpx;
+}
+.brandLists_right.fixed{
+  position: fixed;
+  top:90rpx;
+  right: 0rpx;
+  z-index: 10
+}
+.brandLists_right>view{
+  margin-bottom: 10rpx;
+}
+
+
+.pageHeader_bg{
+  background: #EEEEEE;
+  border-radius: 100rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60vw;
+  align-self: center;
+  margin:0 auto;
+  margin-top: 10rpx;
+}
+.pageHeader_bg image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.pageHeader_bg text{
+  color:#aaa;
+  font-size: 26rpx;
+}
