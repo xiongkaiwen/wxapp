@@ -1,0 +1,41 @@
+<view class='screeningBg'>
+  <scroll-view class='screeningBody' scroll-y  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!-- 地址选择 -->
+    <view class='area_choose'>
+      <view class='area_choose_left'>IShopping 服务</view>
+      <view class='area_choose_right'>
+        <image src='/images/btn_localize_n@2x.png'></image>
+        广州市天河区黄埔街广州市天河区黄埔街
+      </view>
+    </view>
+    <!-- 一级分类选择 -->
+    <view class='classifyLists'>
+      <block wx:for="{{firstNavs}}">
+        <view  class="classify_list {{index%3==1?'middle':''}}">{{item}}</view>
+      </block>
+    </view>
+    <view class="bg_row"></view>
+    <!-- 价格区间 -->
+    <view class='price_choose'>
+      <view class='price_choose_title'>价格区间</view>
+      <view class='price_choose_inputBox'>
+        <input type='number' placeholder='最低价格'></input>
+        <view class='price_choose_input_row'></view>
+        <input type='number' placeholder='最高价格'></input>
+      </view>
+    </view>
+    <!-- 品牌 -->
+    <view class='otherClassify'>
+      <view class='otherClassify_header'>
+        <view class='otherClassify_header_left'>品牌</view>
+        <view class='otherClassify_header_right'>
+          全部
+          <image src='/images/btn_more@2x.png' class='rotate'></image>
+        </view>
+      </view>
+
+    </view>
+    
+
+  </scroll-view>
+</view>

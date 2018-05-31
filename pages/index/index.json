@@ -3,6 +3,7 @@
   "backgroundTextStyle": "dark",
   "usingComponents": {
     "firstPage": "/components/firstNavPage/firstPage",
-    "otherPage": "/components/otherNavPage/otherPage"
+    "otherPage": "/components/otherNavPage/otherPage",
+    "screening": "/components/screening/screening"
   }
 }

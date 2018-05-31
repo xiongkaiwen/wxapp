@@ -1,10 +1,11 @@
+const bmap = require('../../lib/bmap-wx.min.js')
 Page({
   data:{
     position:"自动定位失败...",
     searchText:"品质水果",
     hiddenLoading:false,
     slideIndex:0,
-    isHidden:true,
+    isHidden:false,
     firstNav:[
       '首页',
       '水果生鲜',

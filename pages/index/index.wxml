@@ -53,3 +53,6 @@
 
 </view>
 <loading hidden="{{hiddenLoading}}">正在加载</loading>
+<!-- 
+筛选 -->
+<screening></screening>

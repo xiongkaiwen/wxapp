@@ -4,6 +4,86 @@
   bind:goBack="goBack"
 >
 </shareHeader>
-<!-- 广告图 -->
-<image src='/images/goods.jpg' mode='widthFix' style='width:100%;'></image>
 
+<!-- 广告图 -->
+<!-- <image src='/images/goods.jpg' mode='widthFix' style='width:100%;'></image> -->
+<view class='vip_titleImg'>
+  <image src='/images/298/activity298_list_title.png' mode='widthFix' ></image>
+</view>
+<!-- 分类导航 -->
+<view class='classifyNavs'>
+  <block wx:for="{{classifyNavs}}">
+    <view id='{{item.id}}' bindtap='classifyNavs' data-index='{{index}}' class="classify_nav  {{index==navIndex?'active':''}}">{{item.text}}</view>
+  </block>
+</view>
+<!-- swiper自定义点 -->
+<view class='swiper_nav'> 
+  <block wx:for="{{imgUrls}}">
+    <image src="{{current==index?'/images/298/activity298_point_s.png':'/images/298/activity298_point_n.png'}}" bindtap='swiperNav' data-index='{{index}}'></image>
+  </block>
+</view>
+<!-- swiper列表 -->
+ <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}" bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <block wx:for="{{item.lists}}" wx:for-index="parentIndex">
+          <view class='swiper_list'>
+            <image src='/images/298/activity298_img_label.png' class='swiper_list_298_label'></image>
+            <view class='swiper_list_left'>
+              <image src="{{item.src}}" class="slide-image" />
+            </view>
+            <view class='swiper_list_right'>
+              <view class='swiper_list_title'>{{item.title}}</view>
+              <view class='swiper_list_intro'>{{item.intro}}</view>
+              <view class='swiper_list_lookMore'>查看详情</view>
+              <image data-index='{{index}}' data-parentIndex="{{parentIndex}}" bindtap='toggleSelect' class="swiper_list_select" src="{{item.isSelect?'/images/298/activity298_checkbox_s.png':'/images/298/activity298_checkbox_n.png'}}"></image>
+            </view>
+            
+          </view>
+      </block>
+    </swiper-item>
+  </block>
+</swiper> 
+
+
+<!-- 资料输入 -->
+<view class='form'>
+  <image src='/images/298/activity298_bg.png' class='form_bg'></image>
+  <view class='form_body'>
+    <view class='form_title'>成为店长</view>
+    <view class='inputPart'>
+      <view class='inputPart_title'>姓名：</view>
+      <view class='inputPart_input'>
+        <input type='text' placeholder='请填写您的真实姓名'></input>
+      </view>
+    </view>
+    <view class='inputPart'>
+      <view class='inputPart_title'>电话号码：</view>
+      <view class='inputPart_input'>
+        <input type='number' placeholder='请填写您的联系电话'></input>
+      </view>
+    </view>
+    <view class='inputPart'>
+      <view class='inputPart_title'>身份证号码：</view>
+      <view class='inputPart_input'>
+        <input type='text' placeholder='请填写正确的身份证号码 以保障账户权益'></input>
+      </view>
+    </view>
+    <view class='inputPart'>
+      <view class='inputPart_title'>邀请码：</view>
+      <view class='inputPart_input'>
+        <input type='text' placeholder='Hello2018'></input>
+      </view>
+    </view>
+    <view class='inputPart'>
+      <view class='inputPart_title'>邮箱(选填)：</view>
+      <view class='inputPart_input'>
+        <input type='text' placeholder='请填写您的邮箱'></input>
+      </view>
+    </view>
+    <view class='inputPart_submit'>
+      <image src='/images/298/activity298_btn_submit.png'></image>
+    </view>
+  </view>
+</view>
