@@ -64,6 +64,10 @@
   box-sizing: border-box;
   margin-bottom: 24rpx;
 }
+.classify_list.active{
+  background: #E31C0C;
+  color:#fff;
+}
 .middle.classify_list{
   margin:0 2%;
 }
@@ -103,10 +107,10 @@
 
 
 .otherClassify{
-  padding:0 30rpx;
   margin-top:45rpx;
 }
 .otherClassify_header{
+  padding:0 30rpx;
   display: flex;
   justify-content: space-between;
   height: 60rpx;
@@ -125,4 +129,30 @@
 .otherClassify_header_right image.rotate{
   transform: rotate(180deg);
   margin-top:-2rpx;
+}
+.otherClassify_list_box.middle{
+  margin:0 2%;
+}
+.otherClassify_list_box{
+  height: 80rpx;
+  width: 32%;
+  margin-bottom: 24rpx;
+  background: #F0F0F0;
+  display: flex;
+  border-radius: 10rpx;
+}
+.otherClassify_list{
+  width:100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+  padding:0 4%;
+  box-sizing: border-box;
+  align-self: center
+}
+.middle.otherClassify_list{
+  margin:0 2%;
 }

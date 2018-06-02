@@ -22,7 +22,7 @@
       <view class='cart_list_goods'>
         <!-- 选中按钮 -->
         <view class='cart_list_select'>
-          <image data-index="{{index}}" data-parentIndex="{{parentIndex}}" bindtap='toggleSelect' data-id='{{item.shopId}}' data-parent="{{parent.brandId}}" class='cart_select_img' src="{{item.select?'/images/shoppingcar_btn_select_s.png':'/images/shoppingcar_btn_select_n.png'}}"></image>
+          <image  data-index="{{index}}" data-parentIndex="{{parentIndex}}" bindtap='toggleSelect' data-id='{{item.shopId}}' data-parent="{{parent.brandId}}" class='cart_select_img' src="{{item.select?'/images/shoppingcar_btn_select_s.png':'/images/shoppingcar_btn_select_n.png'}}"></image>
         </view>
         <!-- 商品图片 -->
         <view class='cart_goods_img'>

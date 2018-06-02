@@ -11,7 +11,7 @@
     <!-- 一级分类选择 -->
     <view class='classifyLists'>
       <block wx:for="{{firstNavs}}">
-        <view  class="classify_list {{index%3==1?'middle':''}}">{{item}}</view>
+        <view data-index="{{index}}" class="classify_list {{index==firstNavIndex?'active':''}} {{index%3==1?'middle':''}}" bindtap='toggleFirstNav'>{{item}}</view>
       </block>
     </view>
     <view class="bg_row"></view>
@@ -28,14 +28,19 @@
     <view class='otherClassify'>
       <view class='otherClassify_header'>
         <view class='otherClassify_header_left'>品牌</view>
-        <view class='otherClassify_header_right'>
+        <view class='otherClassify_header_right' bindtap='toggleBrand'>
           全部
-          <image src='/images/btn_more@2x.png' class='rotate'></image>
+          <image src='/images/btn_more@2x.png' class="{{brandAll?'rotate':''}}"></image>
         </view>
       </view>
-
+      <view class='classifyLists' style='margin-top:14rpx;' hidden='{{!brandAll}}'>
+        <block wx:for="{{firstNavs}}">
+          <view class="otherClassify_list_box {{index%3==1?'middle':''}}">
+            <view  class="otherClassify_list {{index%3==1?'middle':''}}">{{item}}</view>
+          </view>
+        </block>
+      </view>
     </view>
-    
 
   </scroll-view>
 </view>

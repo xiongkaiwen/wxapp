@@ -9,8 +9,8 @@ Component({
   properties: {
     firstNavs: {
       type: Array,
-      value: ['促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠',]
-    },
+      value: ['促销优惠', '促销优惠促销优惠促销优惠促销优惠促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠',]
+    }
   },
 
   /**
@@ -18,7 +18,8 @@ Component({
    * 可用于模版渲染
    */
   data: {
-
+    brandAll:true,
+    firstNavIndex:0
   },
 
   /**
@@ -35,6 +36,19 @@ Component({
       //触发取消回调
       this.triggerEvent("cancelEvent")
     },
+    //切换全部
+    toggleBrand:function(){
+      this.setData({
+        brandAll: !this.data.brandAll
+      })
+    },
+    //切换一级分类
+    toggleFirstNav:function(e){
+      let obj={
+        firstIndex: e.currentTarget.dataset.index
+      };
+      this.triggerEvent("toggleFirstNav");
+    }
 
   }
 })
