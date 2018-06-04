@@ -54,6 +54,15 @@
 </view>
 <loading hidden="{{hiddenLoading}}">正在加载</loading>
 <!-- 筛选 -->
-<!-- <screening
+
+ <screening
+  isScreen='{{isScreen}}' 
+  firstNavs="{{screenFirstNavs}}"
+  brandNavs="{{screenBrandNavs}}"
+  firstNavIndex="{{screenFirstNavIndex}}"
+  brandNavIndex="{{screenBrandNavIndex}}"
   bind:toggleFirstNav="toggleFirstNav"
-></screening> -->
+  bind:toggleBrand="toggleBrand"
+  bind:reset="screenReset"
+  bind:confirm="screenConfirm"
+></screening> 

@@ -125,8 +125,11 @@ Component({
           })
         }
       }
+      let obj={
+        index:index
+      }
       //触发条件导航点击事件给父组件
-      this.triggerEvent("condiNav");
+      this.triggerEvent("condiNav",obj);
     },
     //点击切换二级导航隐藏显示部分
     toggleLength:function(){

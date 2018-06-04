@@ -1,4 +1,4 @@
-<view class='screeningBg'>
+<view class='screeningBg' hidden='{{isScreen}}'>
   <scroll-view class='screeningBody' scroll-y  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <!-- 地址选择 -->
     <view class='area_choose'>
@@ -34,13 +34,17 @@
         </view>
       </view>
       <view class='classifyLists' style='margin-top:14rpx;' hidden='{{!brandAll}}'>
-        <block wx:for="{{firstNavs}}">
-          <view class="otherClassify_list_box {{index%3==1?'middle':''}}">
-            <view  class="otherClassify_list {{index%3==1?'middle':''}}">{{item}}</view>
+        <block wx:for="{{brandNavs}}">
+          <view data-index="{{index}}" bindtap='toggleBrand' class="otherClassify_list_box {{index%3==1?'middle':''}} {{brandNavIndex==index?'active':''}}">
+            <view  class="otherClassify_list ">{{item}}</view>
           </view>
         </block>
       </view>
     </view>
-
+    <!-- 功能按钮 -->
+    <view class='toolBtn'>
+      <view bindtap='reset' class='toolBtn_reset'>重置</view>
+      <view bindtap='confirm' class='toolBtn_confirm'>确定</view>
+    </view>
   </scroll-view>
 </view>

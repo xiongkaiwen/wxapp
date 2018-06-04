@@ -61,7 +61,12 @@ Page({
       { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]初春新款薄绒卫衣女长袖纯色上衣打底衫初春新款薄绒卫衣女长袖纯色上衣打底衫', price: '99', sales: '666' },
       { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]', price: '99', sales: '666' },
       { src: '/images/goods.jpg', url: '', title: '初春新款薄绒卫衣女长袖纯色上衣打底衫[01]', price: '99', sales: '666' },
-    ]
+    ],
+    screenFirstNavs: ['促销优惠', '促销优惠促销优惠促销优惠促销优惠促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠',],
+    screenBrandNavs:['促销优惠123333', '促销优惠促销优惠促销优惠促销优惠促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠',],
+    screenFirstNavIndex:1,
+    screenBrandNavIndex:2,
+    isScreen:true
   },
   onLoad:function(e){
     const that =this;
@@ -152,8 +157,14 @@ Page({
 
   },
   //条件导航点击触发的对应事件   用于修改展示商品列表数据
-  _condiNav:function(){
-    console.log(1111)
+  _condiNav:function(e){
+    let index = e.detail.index;
+    //判断是筛选
+    if(index==3){
+      this.setData({
+        isScreen:false
+      })
+    }
   },
   onPullDownRefresh: function () {
     //wx.showNavigationBarLoading() //在标题栏中显示加载
@@ -165,5 +176,32 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
   },
+  // 条件筛选一级分类
+  toggleFirstNav:function(e){
+    let index = e.detail.firstIndex;
+    this.setData({
+      screenFirstNavIndex:index
+    })
+  },
+  //条件筛选品牌分类
+  toggleBrand:function(e){
+    let index = e.detail.firstIndex;
+    this.setData({
+      screenBrandNavIndex:index
+    })
+  },
+  //条件筛选重置按钮
+  screenReset:function(){
+    this.setData({
+      screenFirstNavIndex: 0,
+      screenBrandNavIndex: 0
+    })
+  },
+  //条件筛选确定按钮
+  screenConfirm:function(){
+    this.setData({
+      isScreen:true
+    })
+  }
 
 })

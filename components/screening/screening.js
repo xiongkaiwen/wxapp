@@ -8,8 +8,21 @@ Component({
    */
   properties: {
     firstNavs: {
-      type: Array,
-      value: ['促销优惠', '促销优惠促销优惠促销优惠促销优惠促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠', '促销优惠促销优惠',]
+      type: Array
+    },
+    brandNavs:{
+      type: Array
+    },
+    firstNavIndex:{
+      type:Number,
+      value:0
+    },
+    brandNavIndex:{
+      type: Number,
+      value: 0
+    },
+    isScreen:{
+      type:Boolean
     }
   },
 
@@ -19,7 +32,6 @@ Component({
    */
   data: {
     brandAll:true,
-    firstNavIndex:0
   },
 
   /**
@@ -47,7 +59,22 @@ Component({
       let obj={
         firstIndex: e.currentTarget.dataset.index
       };
-      this.triggerEvent("toggleFirstNav");
+      this.triggerEvent("toggleFirstNav",obj);
+    },
+    //切换品牌分类
+    toggleBrand: function (e) {
+      let obj = {
+        firstIndex: e.currentTarget.dataset.index
+      };
+      this.triggerEvent("toggleBrand",obj);
+    },
+    //重置
+    reset:function(){
+      this.triggerEvent("reset")
+    },
+    //确定
+    confirm:function(){
+      this.triggerEvent("confirm")
     }
 
   }
