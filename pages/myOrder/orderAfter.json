@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pageHeader": "/components/pageHeader/pageHeader",
+    "selfModal":"/components/modal/modal"
+  }
+}

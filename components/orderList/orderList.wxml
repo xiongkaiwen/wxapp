@@ -1,0 +1,46 @@
+<!-- 页面头部 -->
+<block wx:for="{{cartLists}}" wx:for-item="parent" wx:for-index="parentIndex">
+  <view class='cart_list' id='{{parent.brandId}}'>
+    <!-- 订单头部 -->
+    <view class='cart_list_top'>
+      <view class='cart_list_top_left'>
+        <view hidden='{{isOrderSelect}}'>
+            <image data-index="{{parentIndex}}" bindtap='toggleSelect' data-id='{{parent.brandId}}' class='cart_select_img' src="{{parent.select?'/images/shoppingcar_btn_select_s.png':'/images/shoppingcar_btn_select_n.png'}}"></image>
+        </view>
+        <image class='cart_brand_img' src='/images/shoppingcar_icon_shop.png'></image>
+        {{parent.name}}
+      </view>
+      <view class='cart_list_top_right'>{{parent.status}}</view>
+    </view>
+    <!-- 订单列表 -->
+    <block wx:for="{{parent.shopLists}}">
+      <!-- 购物车店铺产品 -->
+      <view class='cart_list_goods'>
+        <!-- 商品图片 -->
+        <view class='cart_goods_img'>
+          <image class='cart_goods_img' src='{{item.src}}' mode='aspectFit'></image>
+        </view>
+        <!-- 商品文字 -->
+        <view class='cart_goods_text'>
+          <view class='cart_goods_title'>
+            {{item.title}}
+          </view>
+          <view class='cart_goods_size'>{{item.size}}
+        </view>
+          <view class='cart_goods_price'>¥{{item.price}}</view>
+        </view>
+        <!-- 商品编辑 -->
+        <view class='cart_goods_edit'>
+          <view class='cart_goods_num'>×{{item.num}}</view>
+        </view>
+      </view>
+    </block>
+    <!-- 订单总和 -->
+    <view class='order_sum'>共2件商品 共计:￥116.99 (含运费￥8.00)</view>
+    <!-- 功能按钮 -->
+    <view class='orderTool'>
+        <view>取消订单</view>
+        <view>付款</view>
+    </view>
+  </view>
+</block>

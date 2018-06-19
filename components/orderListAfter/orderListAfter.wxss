@@ -1,0 +1,135 @@
+.cart_list{
+  padding:0 30rpx;
+  border-bottom: 6rpx solid #eee;
+  padding-bottom: 20rpx;
+}
+.cart_list_top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.cart_select_img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.cart_brand_img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.cart_list_top_left{
+  color:#050101;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+}
+.cart_list_top_left image{
+  vertical-align: middle;
+  margin-top: -2rpx;
+  align-self: center;
+  margin:0 4rpx;
+}
+.cart_list_top_right{
+  color:#F61628;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.cart_list_goods{
+  display: flex;
+  height: 180rpx;
+  margin-bottom: 24rpx;
+}
+.cart_list_select{
+  line-height: 180rpx;
+  height: 180rpx;
+}
+.cart_list_select .cart_select_img{
+  vertical-align: middle;
+}
+.cart_goods_img{
+  margin-left: 10rpx;
+}
+.cart_goods_img image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.cart_goods_title{
+  color:#050101;
+  font-size: 26rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.cart_goods_size{
+  color: #666;
+  font-size: 24rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+  margin-top: 10rpx;
+}
+.cart_goods_price{
+  color: #E60012;
+  font-size: 26rpx;
+  line-height: 1.2;
+  position: absolute;
+  bottom: 0;
+}
+.cart_goods_text{
+  height: 180rpx;
+  margin-left: 20rpx;
+  position: relative;
+  width: 50vw;
+}
+.cart_goods_edit{
+  height: 180rpx;
+  position: relative;
+}
+.cart_goods_edit image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top:-10rpx;
+  left: 50%;
+  left: 11rpx;
+}
+.cart_goods_num{
+  align-self: flex-end;
+  font-size: 24rpx;
+  color:#666;
+  line-height: 1.2;
+  position: absolute;
+  bottom: 0;
+  left: 14rpx;
+}
+
+.order_sum{
+  color:#333;
+  font-size: 26rpx;
+  text-align: right;
+}
+.orderTool{
+  display: flex;
+  margin-top: 20rpx;
+  flex-direction:row-reverse;
+}
+.orderTool>view{
+  height: 56rpx;
+  line-height: 56rpx;
+  padding:0 20rpx;
+  border-radius: 100px;
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  background: #E60012;
+  color:#fff;
+}
+
+.orderAfterText{
+  font-size: 26rpx;
+  color: #E60012;
+}

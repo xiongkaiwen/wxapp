@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "orderHeader": "/components/orderHeader/orderHeader",
+    "orderList":"/components/orderList/orderList",
+    "orderListAfter": "/components/orderListAfter/orderListAfter"
+  }
+}

@@ -1,5 +1,6 @@
 {
-      "usingComponents": {
-        "shareHeader": "/components/shareHeader/shareHeader"
-      }
+  "usingComponents": {
+    "shareHeader": "/components/shareHeader/shareHeader",
+    "selfModal": "/components/modal/modal"
+  }
 }

@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view>
+  <!-- 搜索头部 -->
+  <view class='searchHeader'>
+    <image src='../../images/nav_btn_back_new.png' class='search_goBack' bindtap='goBack'></image>
+    <view class='search'>
+      <image class='search_img' src='../../images/home_nav_search.png'></image>
+      <input class="search_input" placeholder='{{placeholder}}'></input>
+    </view>
+    <text>搜索</text>
+  </view>
+  <!-- 搜索body -->
+  <view class='searchBody'>
+    <!-- 搜索历史 -->
+    <view class="searchHistory">
+      <text class="t1">{{searchHistory}}</text>
+      <view bindtap='clearHistory' wx:if="{{searchHistories.length>0}}" class='clearHistory'>清空历史</view>
+    </view>
+    <view class="searchLists">
+      <block wx:for="{{searchHistories}}">
+          <navigator url='/?id={{item.id}}' class="search_list {{item.isSelect?'select':''}}">
+              <text class='search_text'>{{item.text}}</text>
+          </navigator>
+      </block>
+    </view>
+    
+  </view>
+</view>

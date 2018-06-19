@@ -1,0 +1,10 @@
+<!-- 页面头部 -->
+<view style='position:fixed;width:100%;height:90rpx;top:0;z-index:3'>
+  <view>
+    <view class='pageHeader'>
+      <image class='pageHeader_goback' bindtap='_goBack' src='../../images/nav_btn_back_new.png'></image>
+      <text class='pageHeader_title'>{{pageTitle}}</text>
+      <image class='pageHeader_tool' bindtap='pageTool' src='/images/orderHeader.png'></image>
+    </view>
+  </view>
+</view>

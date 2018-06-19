@@ -40,7 +40,7 @@
       <image src='../../images/me_btn_evaluation.png'></image>
       <text>待评价</text>
     </navigator>
-    <navigator class='myOrder_list'>
+    <navigator url='/pages/myOrder/myOrder' class='myOrder_list'>
       <image src='../../images/me_btn_order.png'></image>
       <text>我的订单</text>
     </navigator>

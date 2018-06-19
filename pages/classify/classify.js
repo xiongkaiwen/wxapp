@@ -216,7 +216,7 @@ Page({
     let index =e.currentTarget.dataset.index;
     console.log(locations)
     wx.pageScrollTo({
-      scrollTop: locations[index]+40,
+      scrollTop: locations[index]+50,
       duration: 100
     })
   },

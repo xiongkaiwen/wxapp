@@ -1,6 +1,10 @@
 {
   "pages":[ 
     "pages/index/index",
+    "pages/myOrder/myOrder",
+    "pages/myOrder/orderAfter",
+    "pages/myOrder/orderSearch",
+    "pages/search/search",
     "pages/beStoreKeeper/beStoreKeeper",
     "pages/shopsDetail/shopsDetail",
     "pages/classify/classify",
@@ -12,7 +16,7 @@
     "pages/me/attention",
     "pages/me/attentionGoods",
     "pages/me/browseHistroy",
-    "pages/search/search",
+    
     "components/firstNavPage/firstPage",
     "components/otherNavPage/otherPage",
     "components/pageHeader/pageHeader",
@@ -22,7 +26,8 @@
     "components/shareHeader/shareHeader",
     "components/shopList/shopList",
     "components/modal/modal",
-    "components/screening/screening"
+    "components/screening/screening",
+    "components/orderListAfter/orderListAfter"
   ],
   "window":{
     "backgroundTextStyle":"light",

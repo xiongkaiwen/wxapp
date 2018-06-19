@@ -1,0 +1,62 @@
+<!-- 订单头部 -->
+<orderHeader
+  pageTitle="我的订单"
+  bind:goBack="goBack"
+  bind:pageToolFn="goSearch"
+>
+</orderHeader>
+<!-- 订单导航 -->
+<view class='condition_nav' data-id='conditionNav'>
+  <block wx:for="{{condiNavs}}" wx:for-item="firstItem">
+    <view data-index='{{index}}' bindtap='condiNav'>
+      <view class="condtion_nav_text {{current==index?'condtion_nav_select':''}}">
+        {{firstItem.text}}              
+      </view> 
+    </view>
+  </block>
+</view>
+
+<!-- swiper列表 -->
+ <swiper style='height:{{swiperHeight}}rpx;' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}" bindchange="swiperChange">
+    <swiper-item>
+      <!-- 全部 -->
+      <orderList
+        cartLists="{{cartLists}}"
+      > 
+      </orderList>
+    </swiper-item>
+    <swiper-item>
+      <!-- 代付款 -->
+      <orderList
+        cartLists="{{cartLists}}"
+         isOrderSelect="{{dai}}"
+      > 
+      </orderList>
+    </swiper-item>
+        <swiper-item>
+      <!-- 待收货 -->
+      <orderList
+        cartLists="{{cartLists}}"
+         isOrderSelect="{{dai}}"
+      > 
+      </orderList>
+    </swiper-item>
+        <swiper-item>
+      <!-- 已完成 -->
+      <orderList
+        cartLists="{{cartLists}}"
+         isOrderSelect="{{dai}}"
+      > 
+      </orderList>
+    </swiper-item>
+        <swiper-item>
+      <!-- 售后中 -->
+      <orderListAfter
+        cartLists="{{cartLists}}"
+        bind:lookDetail="lookDetail"
+      > 
+      </orderListAfter>
+    </swiper-item>
+</swiper> 
+

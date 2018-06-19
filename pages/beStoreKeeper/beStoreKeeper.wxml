@@ -55,35 +55,50 @@
     <view class='inputPart'>
       <view class='inputPart_title'>姓名：</view>
       <view class='inputPart_input'>
-        <input type='text' placeholder='请填写您的真实姓名'></input>
+        <input type='text' value='{{name}}' bindblur="nameInput"  placeholder='请填写您的真实姓名'></input>
       </view>
     </view>
     <view class='inputPart'>
       <view class='inputPart_title'>电话号码：</view>
       <view class='inputPart_input'>
-        <input type='number' placeholder='请填写您的联系电话'></input>
+        <input type='number' value='{{telphone}}' bindblur='telphoneInput' placeholder='请填写您的联系电话'></input>
       </view>
     </view>
     <view class='inputPart'>
       <view class='inputPart_title'>身份证号码：</view>
       <view class='inputPart_input'>
-        <input type='text' placeholder='请填写正确的身份证号码 以保障账户权益'></input>
+        <input type='idcard' value='{{idCard}}' bindblur='idCardInput' placeholder='请填写正确的身份证号码 以保障账户权益'></input>
       </view>
     </view>
     <view class='inputPart'>
       <view class='inputPart_title'>邀请码：</view>
       <view class='inputPart_input'>
-        <input type='text' placeholder='Hello2018'></input>
+        <input type='text' value='{{inviteCode}}' bindblur='inviteCodeInput' placeholder='请填写邀请码'></input>
       </view>
     </view>
     <view class='inputPart'>
       <view class='inputPart_title'>邮箱(选填)：</view>
       <view class='inputPart_input'>
-        <input type='text' placeholder='请填写您的邮箱'></input>
+        <input type='text' bindblur='emailInput' placeholder='请填写您的邮箱'></input>
       </view>
     </view>
-    <view class='inputPart_submit'>
+    <view class='inputPart_submit' bindtap='onSubmit'>
       <image src='/images/298/activity298_btn_submit.png'></image>
     </view>
   </view>
 </view>
+
+
+
+<!-- 对话框 -->
+
+
+<selfModal
+  tips="{{tips}}"
+  modalHidden="{{modalHidden}}"
+  bind:modalBindconfirm="modalBindconfirm"
+  bind:modalBindcancel="modalBindcancel"
+>
+
+</selfModal>
+

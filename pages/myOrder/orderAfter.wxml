@@ -1,0 +1,64 @@
+<!--pages/search/search.wxml-->
+<view>
+  <pageHeader
+    pageTitle="售后详情"
+    bind:goBack="goBack"
+  >
+  </pageHeader>
+  <view class='afterSales'>
+    <view style='align-self:center'>
+        <view class='afterSales_title'>您已成功发起退款申请，剩余2天23时59分 请耐心等待商家处理。</view>
+        <view class='afterSales_li'>
+          商家同意或超时未处理，系统将退款给您
+        </view>
+        <view class='afterSales_li'>
+          若商家拒绝，您可以和商家协调后修改申请后再次发起， 商家会重新处理
+        </view>
+    </view>
+
+  </view>
+  <view class='afterSalesTool'>
+    <view>客服介入</view>
+    <view>客服介入</view>
+    <view>客服介入</view>
+  </view>
+  <!-- 退款信息 -->
+  <view class='refund'>
+    <view class='refund_title'>退款信息</view>
+        <!-- 订单列表 -->
+    <block wx:for="{{shopLists}}">
+      <!-- 购物车店铺产品 -->
+      <view class='cart_list_goods'>
+        <!-- 商品图片 -->
+        <view class='cart_goods_img'>
+          <image class='cart_goods_img' src='{{item.src}}' mode='aspectFit'></image>
+        </view>
+        <!-- 商品文字 -->
+        <view class='cart_goods_text'>
+          <view class='cart_goods_title'>
+            {{item.title}}
+          </view>
+          <view class='cart_goods_size'>{{item.size}}
+        </view>
+          <view class='cart_goods_price'>¥{{item.price}}</view>
+        </view>
+        <!-- 商品编辑 -->
+        <view class='cart_goods_edit'>
+          <view class='cart_goods_num'>×{{item.num}}</view>
+        </view>
+      </view>
+    </block>
+    <view class='order'>退款原因：发票问题</view>
+    <view class='order'>退款金额：￥80.00</view>
+    <view class='order'>申请时间：2018-5-21 20:18</view>
+    <view class='order'>退款编号：123456789987654321</view>
+  </view> 
+</view>
+<selfModal
+  modalHidden="{{modalHidden}}"
+  tips="{{tips}}"
+  bind:modalBindconfirm="modalBindconfirm"
+  bind:modalBindcancel="modalBindcancel"
+>
+
+</selfModal>

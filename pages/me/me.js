@@ -10,7 +10,7 @@ Page({
       src:'../../images/ad.png'
     },
     meServerLists:[
-      { url: '/',src:'../../images/me_btn_wykd.png',text:'我要开店'},
+      { url: '/pages/beStoreKeeper/beStoreKeeper',src:'../../images/me_btn_wykd.png',text:'我要开店'},
       { url: '/pages/me/attentionGoods', src: '../../images/me_btn_wdgz.png', text: '我的关注' },
       { url: '/', src: '../../images/me_btn_wdye.png', text: '我的余额' },
       { url: '/', src: '../../images/me_btn_wdjf.png', text: '我的积分' },
