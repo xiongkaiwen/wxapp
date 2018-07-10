@@ -15,7 +15,9 @@
     "pages/me/chart",
     "pages/me/attention",
     "pages/me/attentionGoods",
-    "pages/me/browseHistroy",
+    "pages/me/browseHistroy"
+    "pages/me/addressEdit"
+
     
     "components/firstNavPage/firstPage",
     "components/otherNavPage/otherPage",
