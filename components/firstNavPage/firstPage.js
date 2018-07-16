@@ -37,6 +37,9 @@ Component({
     //二级导航
     secondNav:{
       type:Array,
+
+
+      
     },
     //精品推荐
     qualityGoods:{
